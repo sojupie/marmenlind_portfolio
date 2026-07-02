@@ -1,31 +1,44 @@
 # Olle Marmenlind
 
-Computer Engineering undergraduate at KTH focused on distributed systems, cloud infrastructure, and real-time embedded solutions.
+Computer Engineering undergraduate. Builds backend infrastructure (PostgreSQL, distributed ingestion, ETL), embedded systems (RISC-V/FreeRTOS firmware), and runs product ownership end-to-end at Sevan AB since 2022.
 
 [![CV](https://img.shields.io/badge/CV-Download-blue)](https://marmenlind.com/assets/docs/CV_OLLE_MARMENLIND_RESUME.pdf)
 [![Spotify](https://img.shields.io/badge/Spotify-Profile-1DB954?logo=spotify&logoColor=white)](https://open.spotify.com/user/1162698027?si=64481cfa94ca490b)
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github&logoColor=white)](https://github.com/thewayla)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github&logoColor=white)](https://github.com/sojuepie)
 
 ---
 
-## Technical Projects
+## Experience
 
-### FBG Interrogator
-**C#/.NET + C/FreeRTOS** — *Proximion AB*
+### Sevan AB (March 2022 – Present)
+**Technical Product Owner — Stockholm, Sweden (Remote)**
 
-Engineered a ∼$500 prototype that matched performance of $10k+ industrial systems. Collaborated in a 6-person cross-functional team as one of the primary developers for the firmware and PC-host layers and built a preemptive multithreaded system (FreeRTOS/RISC-V) to synchronize high-priority ISRs with data processing. Developed C#/.NET host with a custom USB transfer protocol for sub-ms sensor readout and visualization. Built a self-hosted Linux CI/CD pipeline using hermetic Docker containers to enforce linting, formatting, and build validation.
+* Promoted to Product Owner; scaled B2C content platform from 4.5K to 200K users and migrated 300+ B2B accounts to a digital e-commerce channel.
+* Directed product roadmap and authored 400+ Jira tickets including API schemas and data models.
+* **Sales Catalog Generator (Java):** Developed a cross-platform desktop application using Java/AtlantaFX for unified deployment. Built an ETL pipeline to ingest CSV datasets, merge assets via REST APIs, and render print-ready PDFs. Reduced production time from hours to <3 minutes, replacing manual design workflows with automated generation that enabled the sales team to create more customer-specific catalogs.
 
-*Closed Source (Industry R&D)*
+### Motillo AB (March 2026 – June 2026)
+**Software Engineering (Client Project, KTH Industry Course) — Sweden (Remote)**
 
-### Sales Catalog Generator
-**Java/JavaFX** — *Sevan AB*
+* Built the React/TypeScript SPA (Entra ID auth) as a two-way control plane for UptimeRobot, managing tenant monitors, and for Litium order ingestion, built specifically to run continuously on legacy Chrome 76 lobby kiosks.
+* Implemented a simulated Lambda Architecture using PostgreSQL Materialized Views for historical rollups, merging them with live data to drop query times from 330ms to ~20ms over 4 million rows.
+* Set up an asynchronous ingestion buffer using Hangfire and Polly to handle upstream API rate limits and prevent frontend load delays.
+* Wrote a C#/ASP.NET Core Web API extension for the Litium platform to extract, transform, and serve flattened Elasticsearch order data.
 
-Developed a cross-platform desktop application using JavaFX/AtlantaFX, enabling unified deployment across Windows, Linux, and macOS. Built an ETL pipeline to ingest CSV datasets and render print-ready PDFs programmatically. Replaced manual design workflows, reducing production time from hours to <3 minutes.
+### Proximion AB (October 2025 – January 2026)
+**R&D SWE Member (Selected University-Industry Project) — Stockholm, Sweden**
 
-*Coming soon, currently being re-written*
+* Built a ~$500 4-channel, 90Hz prototype that matched the performance of $10k+ industrial systems.
+* Developed FreeRTOS/RISC-V firmware in C, using binary semaphores to synchronize high-priority ISRs with background data processing queues.
+* Created a C#/.NET host application with a custom USB protocol for sub-ms sensor readout and visualization.
+* Configured a self-hosted Linux CI/CD pipeline using Docker to enforce reproducible RISC-V builds, automated format patching, and release generation.
+
+---
+
+## Other Projects
 
 ### B2B Scan-to-Order
-**Android / Kotlin** — *Sevan AB*
+**Android / Kotlin** — *Personal Project*
 
 Architected a fault-tolerant Android application using Kotlin Coroutines for structured concurrency. Engineered a distributed data synchronization engine with automatic failover strategies (Firestore/REST). Integrated Google ML Kit for on-device barcode inference to enable scanning in low-connectivity environments.
 
@@ -33,7 +46,12 @@ Architected a fault-tolerant Android application using Kotlin Coroutines for str
 
 ---
 
-## Case studies & Previous Work
+## Case studies & Previous Academic Work
+
+### Technical Report: Silent Protocol Downgrading and HSTS Mitigation
+An analysis of the vulnerability of the HTTP-to-HTTPS transition mechanism to Man-in-the-Middle (MITM) attacks and the effectiveness of HTTP Strict Transport Security (HSTS) as a countermeasure.
+
+[View report](https://marmenlind.com/MITM-attacks-and-HSTS-Mitigation/)
 
 ### Technical Report: Principles of Reliable A/B Testing
 A technical framework covering the design and execution of statistically valid A/B tests, from hypothesis formulation to the interpretation of results.
@@ -53,10 +71,11 @@ A strategy for applying behavioral science to increase Average Order Value (AOV)
 * Technical Product Owner at Sevan AB while pursuing B.Sc. studies.
 
 ### Technical Stack
-* **Languages:** C, Java, C#/.NET, Kotlin, Assembly
-* **Systems & Infrastructure:** Linux, Docker, FreeRTOS, RISC-V, CI/CD, Real-Time Systems, Cloud Computing (GCP/AWS)
-* **Data & Networking:** SQL, NoSQL (Firestore/MongoDB), REST, TCP/UDP
-* **Tools:** Git, CMake, YAML/JSON
+* **Languages:** Java, Go, C#, TypeScript, C, Kotlin, Assembly
+* **Systems & Infrastructure:** Linux, Docker, CI/CD, Azure, GCP, AWS, Microservices, Distributed Systems, FreeRTOS, RISC-V, Real-Time Systems
+* **Frameworks:** ASP.NET Core, Spring Boot, React, Vite, TanStack Router/Query
+* **Data & Networking:** PostgreSQL, MySQL, Elasticsearch, MongoDB, REST, TCP/UDP, ETL/Data Pipelines
+* **Tools:** Git, Bash, PowerShell, CMake, Jira, Agile
 
 ### Education
 **Royal Institute of Technology (KTH)**
@@ -64,17 +83,6 @@ B.Sc. in Computer Engineering (Expected June 2027)
 
 * *Relevant Coursework:* Data Structures, Algorithms, Operating Systems, Microcontrollers (graduate level), Computer Networks, Databases, Information Security.
 * *Certifications:* CCNA, CCNP
-
----
-
-## Experience
-
-### Sevan AB (March 2022 – Present)
-**Product Owner (Technical)**
-
-* Promoted to Product Owner; Scaled B2C content platform from 4.5K to 200K users and migrated 300+ B2B accounts to a digital e-commerce channel.
-* Directed product roadmap and authored 400+ Jira tickets (including API schemas) to coordinate development across two external partner teams.
-* Engineered a Java catalog automation tool and a production-intent Android prototype.
 
 ---
 

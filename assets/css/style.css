@@ -19,7 +19,7 @@
   --header-bottom-margin: 3rem;
   --section-bottom-margin: 2rem;
   --element-bottom-margin: 1.5rem;
-  --nav-top: 8rem
+  --nav-top: 8rem;
 
   --breakpoint-large: 64rem;
   --breakpoint-medium: 48rem;
@@ -275,6 +275,54 @@ main section:last-of-type {
     display: inline-block;
 }
 
+.experience-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+}
+
+.experience-card {
+  border-left: 4px solid var(--color-primary);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.experience-header h4 {
+  margin-bottom: 0;
+}
+
+.experience-meta {
+  font-size: 1rem;
+  color: var(--light-grey);
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.experience-role {
+  font-size: 1.1rem;
+  color: var(--light-grey);
+  margin-top: 0.25rem;
+}
+
+.experience-card ul {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+  list-style-type: disc;
+}
+
+.experience-card li {
+  font-size: 1.25rem;
+}
+
 .about-me ul ul {
   margin-top: 0.5rem;
   margin-bottom: 0;
@@ -337,11 +385,23 @@ section.about-me-container > section {
   flex-basis: 50%;
 }
 
+/* When about-me-container only has one child section (e.g. Experience
+   moved out to its own top-level section), let it take the full width
+   instead of sitting at 50% with empty space beside it. */
+section.about-me-container > section:only-child {
+  flex-basis: 100%;
+}
+
 @media (min-width: 38rem) {
   section.about-me-container > section:last-child {
     border-left: 1px solid var(--color-hr);
     padding-left: var(--card-gap);
     margin-left: var(--card-gap);
+  }
+  section.about-me-container > section:only-child {
+    border-left: none;
+    padding-left: 0;
+    margin-left: 0;
   }
 }
 
