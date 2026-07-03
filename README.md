@@ -4,7 +4,7 @@ Computer Engineering undergraduate. Builds backend infrastructure (PostgreSQL, d
 
 [![CV](https://img.shields.io/badge/CV-Download-blue)](https://marmenlind.com/assets/docs/CV_OLLE_MARMENLIND_RESUME.pdf)
 [![Spotify](https://img.shields.io/badge/Spotify-Profile-1DB954?logo=spotify&logoColor=white)](https://open.spotify.com/user/1162698027?si=64481cfa94ca490b)
-[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github&logoColor=white)](https://github.com/sojuepie)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-181717?logo=github&logoColor=white)](https://github.com/sojupie)
 
 ---
 
