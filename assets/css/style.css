@@ -7,7 +7,8 @@
   --color-background: var(--white);
   --color-primary: var(--red);
   --color-text: var(--dark-grey);
-  --color-link: var(--red);
+  --color-link: var(--dark-grey);
+  --color-text-decoration: var(--red);
   --color-border: #0000000a;
   --color-hr: #cccccc;
 
@@ -113,7 +114,9 @@ li:last-child {
 
 a {
   color: var(--color-link);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  text-decoration-color: var(--color-text-decoration);
 }
 
 a:hover,
