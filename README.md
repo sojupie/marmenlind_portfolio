@@ -15,7 +15,7 @@ Computer Engineering undergraduate. Builds backend infrastructure (PostgreSQL, d
 
 * Promoted to Product Owner; scaled B2C content platform from 4.5K to 200K users and migrated 300+ B2B accounts to a digital e-commerce channel.
 * Directed product roadmap and authored 400+ Jira tickets including API schemas and data models.
-* **Sales Catalog Generator (Java):** Developed a cross-platform desktop application using Java/AtlantaFX for unified deployment. Built an ETL pipeline to ingest CSV datasets, merge assets via REST APIs, and render print-ready PDFs. Reduced production time from hours to <3 minutes, replacing manual design workflows with automated generation that enabled the sales team to create more customer-specific catalogs.
+* Collaborated cross-functionally to translate business requirements into technical solutions and development priorities, coordinated development across external partner teams and vendors.
 
 ### Motillo AB (March 2026 – June 2026)
 **Software Engineering (Client Project, KTH Industry Course) — Sweden (Remote)**
