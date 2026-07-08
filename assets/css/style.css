@@ -7,7 +7,8 @@
   --color-background: var(--white);
   --color-primary: var(--red);
   --color-text: var(--dark-grey);
-  --color-link: var(--red);
+  --color-link: var(--dark-grey);
+  --color-text-decoration: var(--red);
   --color-border: #0000000a;
   --color-hr: #cccccc;
 
@@ -47,7 +48,12 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: 1rem;
   font-weight: bold;
 }
@@ -58,10 +64,11 @@ h1 {
 
 h2 {
   font-size: 2rem;
-    margin-top: var(--section-bottom-margin);
+  margin-top: var(--section-bottom-margin);
 }
-section > h2:first-of-type {
-    margin-top: 0;
+
+section>h2:first-of-type {
+  margin-top: 0;
 }
 
 
@@ -77,11 +84,12 @@ p {
   margin-bottom: var(--element-bottom-margin);
   font-size: 1.25rem;
 }
+
 p:last-child,
 ul:last-child,
 div.cards:last-child,
 ul.cards:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 
@@ -95,18 +103,22 @@ li {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
+
 li:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.menuCards > li {
+.menuCards>li {
   margin-bottom: 0;
 }
 
 a {
   color: var(--color-link);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+  text-decoration-color: var(--color-text-decoration);
 }
+
 a:hover,
 a:focus {
   text-decoration: underline;
@@ -118,8 +130,9 @@ img {
   display: block;
 }
 
-strong, b {
-    font-weight: bold;
+strong,
+b {
+  font-weight: bold;
 }
 
 .wrapper {
@@ -151,8 +164,8 @@ strong, b {
 
 
 .logo img {
-    height: 60px;
-    width: auto;
+  height: 60px;
+  width: auto;
 }
 
 .social-nav {
@@ -162,15 +175,16 @@ strong, b {
 }
 
 .social-nav img {
-    height: 40px;
-    width: auto;
+  height: 40px;
+  width: auto;
 }
 
 main section {
-    margin-bottom: var(--section-bottom-margin);
+  margin-bottom: var(--section-bottom-margin);
 }
+
 main section:last-of-type {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .intro {
@@ -189,20 +203,20 @@ main section:last-of-type {
   column-gap: var(--card-gap);
 }
 
-.card > p:has(> time) {
+.card>p:has(> time) {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.cards > li {
+.cards>li {
   break-inside: avoid;
   margin-bottom: var(--card-gap);
 }
 
-.cards > li:last-child {
-    margin-bottom: 0;
+.cards>li:last-child {
+  margin-bottom: 0;
 }
 
 @media (min-width: 38rem) {
@@ -214,113 +228,84 @@ main section:last-of-type {
 .card {
   border: 1px solid var(--color-border);
   border-radius: 1rem;
-  box-shadow: 0 2px 1px rgba(0,0,0,.05), 0 4px 2px rgba(0,0,0,.05), 0 8px 4px rgba(0,0,0,.05), 0 16px 8px rgba(0,0,0,.05);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, .05), 0 4px 2px rgba(0, 0, 0, .05), 0 8px 4px rgba(0, 0, 0, .05), 0 16px 8px rgba(0, 0, 0, .05);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
 }
 
 .card img {
-    width: auto;
-    margin-bottom: 1rem;
+  width: auto;
+  margin-bottom: 1rem;
 }
 
-.menuCards > .card img {
-    margin-bottom: 0;
+.menuCards>.card img {
+  margin-bottom: 0;
 }
 
 .card h3 {
-    margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
 }
+
 .card h3 a {
 
-    color: var(--color-link);
-    text-decoration: none;
+  color: var(--color-link);
+  text-decoration: none;
 }
+
 .card h3 a:hover,
 .card h3 a:focus {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .card h4 {
-    margin-bottom: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 
 .card p,
 .card ul {
-    margin-top: 1rem;
-    margin-bottom: 0rem;
-    font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  font-size: 1.25rem;
 }
+
 .card ul {
-    padding-left: 1.25rem;
-    list-style-position: outside;
+  padding-left: 1.25rem;
+  list-style-position: outside;
 }
 
 .card li {
-    font-size: 1.25rem;
-    margin-bottom: 0.25rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
 }
 
 .card p:last-child,
 .card ul:last-child,
-.card > a:last-child:not(:only-child) {
-    margin-bottom: 0;
+.card>a:last-child:not(:only-child) {
+  margin-bottom: 0;
 }
 
 
-.card > a:last-child {
-    margin-top: auto;
-    padding-top: 1rem;
-    display: inline-block;
-}
-
-.experience-list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: var(--card-gap);
-}
-
-.experience-card {
-  border-left: 4px solid var(--color-primary);
+.card>a:last-child {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: inline-block;
 }
 
 .experience-header {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  gap: 1rem;
   flex-wrap: wrap;
-  gap: 0.5rem 1rem;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
-.experience-header h4 {
+.experience-header p {
+  margin-top: 0;
+}
+
+.experience-header h3 {
   margin-bottom: 0;
-}
-
-.experience-meta {
-  font-size: 1rem;
-  color: var(--light-grey);
-  white-space: nowrap;
-  margin-bottom: 0;
-}
-
-.experience-role {
-  font-size: 1.1rem;
-  color: var(--light-grey);
-  margin-top: 0.25rem;
-}
-
-.experience-card ul {
-  margin-top: 1rem;
-  margin-bottom: 0;
-  padding-left: 1.25rem;
-  list-style-type: disc;
-}
-
-.experience-card li {
-  font-size: 1.25rem;
 }
 
 .about-me ul ul {
@@ -328,9 +313,9 @@ main section:last-of-type {
   margin-bottom: 0;
 }
 
-  .about-me {
-    margin-bottom: 0;
-  }
+.about-me {
+  margin-bottom: 0;
+}
 
 .menuCards {
   list-style: none;
@@ -342,7 +327,7 @@ main section:last-of-type {
   gap: 1.5rem;
 }
 
-.menuCards > li {
+.menuCards>li {
   flex-grow: 1;
   width: 15rem;
   display: flex;
@@ -381,24 +366,25 @@ section.about-me-container {
   display: flex;
 }
 
-section.about-me-container > section {
+section.about-me-container>section {
   flex-basis: 50%;
 }
 
 /* When about-me-container only has one child section (e.g. Experience
    moved out to its own top-level section), let it take the full width
    instead of sitting at 50% with empty space beside it. */
-section.about-me-container > section:only-child {
+section.about-me-container>section:only-child {
   flex-basis: 100%;
 }
 
 @media (min-width: 38rem) {
-  section.about-me-container > section:last-child {
+  section.about-me-container>section:last-child {
     border-left: 1px solid var(--color-hr);
     padding-left: var(--card-gap);
     margin-left: var(--card-gap);
   }
-  section.about-me-container > section:only-child {
+
+  section.about-me-container>section:only-child {
     border-left: none;
     padding-left: 0;
     margin-left: 0;
@@ -409,7 +395,8 @@ section.about-me-container > section:only-child {
   section.about-me-container {
     flex-direction: column;
   }
-  section.about-me-container > section {
+
+  section.about-me-container>section {
     flex-basis: 100%;
     margin-left: 0;
     padding-left: 0;

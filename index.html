@@ -10,7 +10,7 @@
     content="Portfolio of Olle Marmenlind, Computer Engineering undergraduate. Builds backend infrastructure (PostgreSQL, distributed ingestion, ETL), embedded systems (RISC-V/FreeRTOS firmware), and runs product ownership end-to-end at Sevan AB since 2022.">
   <meta name="author" content="Olle Marmenlind">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" href="assets/img/marmeno-logo-50px.png">
+  <link rel="icon" href="assets/img/marmeno-logo.png">
 
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -57,35 +57,34 @@
       <section class="current-focus" aria-labelledby="focus-heading">
         <h2 id="focus-heading">Experience</h2>
 
-        <ul class="experience-list">
+        <ul class="cards">
           <li>
-            <article class="card experience-card">
+            <article class="card">
               <div class="experience-header">
-                <h4>Sevan AB</h4>
-                <p class="experience-meta">March 2022 – Present</p>
+                <h3>Sevan AB</h3>
+                <p><em>March 2022 – Present</em></p>
               </div>
-              <p class="experience-role">Technical Product Owner — Stockholm, Sweden (Remote)</p>
+              <p><strong>Technical Product Owner — Stockholm, Sweden (Remote)</strong></p>
               <ul>
                 <li>Promoted to Product Owner; scaled a B2C content platform from 4.5K to 200K users and migrated
                   300+ B2B accounts to a digital e-commerce channel.</li>
                 <li>Directed product roadmap and authored 400+ Jira tickets including API schemas and data
                   models.</li>
-                <li><strong>Sales Catalog Generator (Java):</strong> Developed a cross-platform desktop
-                  application using Java/AtlantaFX for unified deployment. Built an ETL pipeline to ingest CSV
-                  datasets, merge assets via REST APIs, and render print-ready PDFs. Reduced production time from
-                  hours to &lt;3 minutes, replacing manual design workflows with automated generation that
-                  enabled the sales team to create more customer-specific catalogs.</li>
+                <li>Collaborated cross-functionally to translate business requirements into technical solutions and
+                  development priorities, coordinated development across external partner teams and vendors.</li>
               </ul>
             </article>
           </li>
 
           <li>
-            <article class="card experience-card">
+            <article class="card">
               <div class="experience-header">
-                <h4>Motillo AB</h4>
-                <p class="experience-meta">March 2026 – June 2026</p>
+                <h3>Motillo AB</h3>
+                <p><em>March 2026 – June 2026</em></p>
               </div>
-              <p class="experience-role">Software Engineering (Client Project, KTH Industry Course) — Sweden (Remote)</p>
+              <p><strong>Software Engineering (Client Project, KTH Industry Course) — Sweden
+                  (Remote)
+                </strong></p>
               <ul>
                 <li>Built the React/TypeScript SPA (Entra ID auth) as a two-way control plane for UptimeRobot,
                   managing tenant monitors, and for Litium order ingestion, built specifically to run
@@ -102,12 +101,14 @@
           </li>
 
           <li>
-            <article class="card experience-card">
+            <article class="card">
               <div class="experience-header">
-                <h4>Proximion AB</h4>
-                <p class="experience-meta">October 2025 – January 2026</p>
+                <h3>Proximion AB</h3>
+                <p><em>October 2025 – January 2026</em></p>
               </div>
-              <p class="experience-role">R&amp;D SWE Member (Selected University-Industry Project) — Stockholm, Sweden</p>
+              <p><strong>R&amp;D SWE Member (Selected University-Industry Project) — Stockholm,
+                  Sweden
+                </strong></p>
               <ul>
                 <li>Built a ~$500 4-channel, 90Hz prototype that matched the performance of $10k+ industrial
                   systems.</li>
@@ -115,7 +116,8 @@
                   high-priority ISRs with background data processing queues.</li>
                 <li>Created a C#/.NET host application with a custom USB protocol for sub-ms sensor readout and
                   visualization.</li>
-                <li>Configured a self-hosted Linux CI/CD pipeline using hermetic Docker containers to enforce reproducible RISC-V
+                <li>Configured a self-hosted Linux CI/CD pipeline using hermetic Docker containers to enforce
+                  reproducible RISC-V
                   builds, automated format patching, and release generation.</li>
               </ul>
             </article>
@@ -130,7 +132,7 @@
         <ul class="cards">
           <li>
             <article class="card">
-              <h4>B2B Scan-to-Order</h4>
+              <h3>B2B Scan-to-Order</h3>
               <p><strong>Android / Kotlin</strong> — <em>Personal Project</em></p>
               <p>
                 Architected a fault-tolerant Android application using Kotlin Coroutines for structured concurrency.
@@ -189,6 +191,9 @@
             <h2 id="about-heading">About me</h2>
             <ul>
               <li>Based in Stockholm, Sweden.</li>
+              <li>Avid music fan and vinyl collector. Find me on <a
+                  href="https://open.spotify.com/user/1162698027?si=64481cfa94ca490b" target="_blank"
+                  rel="noopener noreferrer">Spotify</a>.</li>
               <li>Technical Product Owner at Sevan AB while pursuing B.Sc. studies.</li>
             </ul>
 
