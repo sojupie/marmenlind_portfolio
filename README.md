@@ -67,11 +67,10 @@ A strategy for applying behavioral science to increase Average Order Value (AOV)
 
 ## About me
 * Based in Stockholm, Sweden.
-* Avid music fan and vinyl collector. Find me on [Spotify](https://open.spotify.com/user/1162698027?si=64481cfa94ca490b).
 * Technical Product Owner at Sevan AB while pursuing B.Sc. studies.
 
 ### Technical Stack
-* **Languages:** Java, Go, C#, TypeScript, C, Kotlin, Assembly
+* **Languages:** Java, C#, C, Kotlin, TypeScript, Assembly
 * **Systems & Infrastructure:** Linux, Docker, CI/CD, Azure, GCP, AWS, Microservices, Distributed Systems, FreeRTOS, RISC-V, Real-Time Systems
 * **Frameworks:** ASP.NET Core, Spring Boot, React, Vite, TanStack Router/Query
 * **Data & Networking:** PostgreSQL, MySQL, Elasticsearch, MongoDB, REST, TCP/UDP, ETL/Data Pipelines
