@@ -25,10 +25,10 @@ Computer Engineering undergraduate. Builds backend infrastructure (PostgreSQL, d
 * Wrote a C#/ASP.NET Core Web API extension for the Litium platform to extract, transform, and serve flattened Elasticsearch order data.
 
 ### Proximion AB (October 2025 – January 2026)
-**R&D SWE Member (Selected University-Industry Project) — Stockholm, Sweden**
+**R&D SWE Member (University-Industry Project) — Stockholm, Sweden**
 
-* Built a ~$500 4-channel, 90Hz prototype that matched the performance of $10k+ industrial systems.
-* Developed FreeRTOS/RISC-V firmware in C, using binary semaphores to synchronize high-priority ISRs with background data processing queues.
+* Developed FreeRTOS/RISC-V firmware in C for a Fiber Bragg Grating (FBG) Interrogator prototype.
+* Used binary semaphores to synchronize high-priority ISRs with background data processing queues (preemptive multithreading, single core SOC). 
 * Created a C#/.NET host application with a custom USB protocol for sub-ms sensor readout and visualization.
 * Configured a self-hosted Linux CI/CD pipeline using Docker to enforce reproducible RISC-V builds, automated format patching, and release generation.
 
