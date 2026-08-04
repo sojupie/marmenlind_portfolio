@@ -2,7 +2,7 @@ name: Build and deploy Hugo site
 
 on:
   push:
-    branches: [maind]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -33,16 +33,13 @@ jobs:
           tar -xf "${{ runner.temp }}/hugo.tar.gz" -C "${{ runner.temp }}"
           sudo mv "${{ runner.temp }}/hugo" /usr/local/bin/
       - name: Configure Pages
-        id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
       - name: Set up pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
       - name: Install CSS dependencies
         run: pnpm install --frozen-lockfile
       - name: Build
-        run: |
-          pnpm css
-          hugo --gc --minify --cleanDestinationDir --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: pnpm build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
