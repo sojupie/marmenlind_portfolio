@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{ if .Params.legacy_full }}
+<div class="prose prose-neutral mx-auto max-w-3xl break-words px-5 py-12 prose-headings:font-sans prose-headings:font-semibold prose-headings:text-black prose-h1:text-left prose-h1:text-4xl prose-h1:leading-tight prose-h1:tracking-tight prose-a:text-black prose-a:decoration-1 prose-a:underline-offset-3 hover:prose-a:decoration-2 prose-blockquote:text-black prose-code:font-mono prose-img:grayscale prose-li:text-black prose-p:text-black prose-strong:text-black prose-table:text-xs prose-th:text-black md:py-16 lg:py-20">
+  {{ .Content }}
+</div>
+{{ else }}
+<article class="mx-auto w-full max-w-6xl px-5 py-12 md:px-8 md:py-16 lg:pb-28 xl:px-12">
+  <header class="grid border-b border-black pb-12 md:grid-cols-4 md:gap-x-8">
+    <p class="mb-10 font-mono text-xs uppercase tracking-wide md:col-span-4">{{ with .Date }}{{ .Format "2006-01-02" }}{{ else }}{{ .Params.year }}{{ end }}</p>
+    <h1 class="mb-5 max-w-4xl font-sans text-4xl font-semibold leading-tight tracking-tight md:col-span-3 md:col-start-2 md:text-5xl">{{ .Title }}</h1>
+    <p class="mb-8 max-w-2xl text-lg md:col-span-3 md:col-start-2">{{ .Description }}</p>
+    <dl class="m-0 w-full max-w-lg space-y-2 md:col-span-3 md:col-start-2">
+      {{ with .Params.discipline }}
+      <div class="grid grid-cols-3 gap-4"><dt class="font-mono text-xs uppercase">Area</dt><dd class="col-span-2 m-0 text-sm">{{ . }}</dd></div>
+      {{ end }}
+      {{ if eq .Section "writing" }}
+      <div class="grid grid-cols-3 gap-4"><dt class="font-mono text-xs uppercase">Length</dt><dd class="col-span-2 m-0 text-sm">{{ .ReadingTime }} min</dd></div>
+      {{ end }}
+    </dl>
+  </header>
+  <div class="prose prose-neutral max-w-3xl pt-14 prose-headings:font-sans prose-headings:font-semibold prose-headings:text-black prose-a:text-black prose-a:decoration-1 prose-a:underline-offset-3 hover:prose-a:decoration-2 prose-blockquote:border-black prose-blockquote:text-black prose-code:font-mono prose-img:border prose-img:border-neutral-400 prose-img:grayscale prose-li:text-black prose-p:text-black prose-strong:text-black prose-pre:rounded-none prose-pre:border prose-pre:border-neutral-400 prose-pre:bg-white prose-pre:text-black prose-table:text-xs md:ml-48">{{ .Content }}</div>
+</article>
+{{ end }}
+{{ end }}

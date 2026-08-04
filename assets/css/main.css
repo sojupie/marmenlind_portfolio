@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@source "../../layouts";
+@source "../../content";
+
+@theme {
+  --font-sans: "Inter", Arial, sans-serif;
+  --font-serif: "Noto Serif", Georgia, serif;
+  --font-mono: "Spline Sans Mono", Consolas, monospace;
+  --background-image-paper: url("/assets/img/paper.jpg");
+}

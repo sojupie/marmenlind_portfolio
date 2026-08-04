@@ -1,0 +1,17 @@
+{
+  "name": "marmenlind-portfolio",
+  "private": true,
+  "packageManager": "pnpm@11.9.0",
+  "scripts": {
+    "css": "tailwindcss -i ./assets/css/main.css -o ./static/css/main.css --minify",
+    "dev": "pnpm run --parallel \"/^dev:.*/\"",
+    "dev:css": "tailwindcss -i ./assets/css/main.css -o ./static/css/main.css --watch",
+    "dev:hugo": "hugo server -D",
+    "build": "pnpm css && hugo --gc --minify --cleanDestinationDir"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "@tailwindcss/typography": "^0.5.20",
+    "tailwindcss": "^4.3.3"
+  }
+}

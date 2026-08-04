@@ -4,3 +4,8 @@ sook_se.txt
 .idea/marmenlind_portfolio.iml
 .idea/modules.xml
 .idea/encodings.xml
+public/
+resources/_gen/
+.hugo_build.lock
+node_modules/
+static/css/main.css

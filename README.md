@@ -27,7 +27,7 @@ Computer Engineering undergraduate. Builds backend infrastructure (PostgreSQL, d
 ### Proximion AB (October 2025 – January 2026)
 **R&D SWE Member (University-Industry Project) — Stockholm, Sweden**
 
-* Developed FreeRTOS/RISC-V firmware in C for a Fiber Bragg Grating (FBG) Interrogator prototype.
+* Developed FreeRTOS/RISC-V firmware in C for a Fiber Bragg grating (FBG) interrogator prototype.
 * Used binary semaphores to synchronize high-priority ISRs with background data processing queues (preemptive multithreading, single core SOC). 
 * Created a C#/.NET host application with a custom USB protocol for sub-ms sensor readout and visualization.
 * Configured a self-hosted Linux CI/CD pipeline using Docker to enforce reproducible RISC-V builds, automated format patching, and release generation.
@@ -56,11 +56,6 @@ An analysis of the vulnerability of the HTTP-to-HTTPS transition mechanism to Ma
 A technical framework covering the design and execution of statistically valid A/B tests, from hypothesis formulation to the interpretation of results.
 
 [View report](https://marmenlind.com/assets/docs/ab_testing_principles.pdf)
-
-### Case Study: Increasing Average Order Value
-A strategy for applying behavioral science to increase Average Order Value (AOV) via data-driven recommendations.
-
-[View case study](https://marmenlind.com/highlight-discount-case/)
 
 ---
 

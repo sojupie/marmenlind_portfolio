@@ -1,0 +1,13 @@
+<nav class="mx-auto w-full max-w-6xl px-5 pt-8 font-mono text-xs md:px-8 xl:px-12" aria-label="Breadcrumb">
+  <ol class="flex flex-wrap items-center gap-2">
+    <li><a class="underline decoration-1 underline-offset-3 hover:decoration-2" href="/">Home</a></li>
+    {{ range .Ancestors.Reverse }}
+      {{ if not .IsHome }}
+      <li class="material-symbols-outlined text-base! leading-none" aria-hidden="true">chevron_right</li>
+      <li><a class="underline decoration-1 underline-offset-3 hover:decoration-2" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+      {{ end }}
+    {{ end }}
+    <li class="material-symbols-outlined text-base! leading-none" aria-hidden="true">chevron_right</li>
+    <li aria-current="page">{{ .LinkTitle }}</li>
+  </ol>
+</nav>
