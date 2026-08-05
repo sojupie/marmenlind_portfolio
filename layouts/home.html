@@ -21,44 +21,44 @@
     </dl>
   </header>
 
-  <section class="grid gap-6 border-t border-black py-10 md:grid-cols-4 md:gap-8 md:pb-20" id="profile"
+  <section class="grid gap-6 border-t border-black py-10 md:grid-cols-5 md:gap-8 md:pb-20" id="profile"
     aria-labelledby="profile-title">
     <header>
       <h2 class="font-sans text-lg font-semibold leading-tight" id="profile-title">Profile</h2>
     </header>
-    <div class="prose prose-neutral max-w-3xl prose-p:mt-0 prose-p:mb-5 prose-p:text-black md:col-span-3">{{ .Content }}
+    <div class="prose prose-neutral max-w-3xl prose-p:mt-0 prose-p:mb-5 prose-p:text-black md:col-span-4">{{ .Content }}
     </div>
   </section>
 
-  <section class="grid gap-6 border-t border-black py-10 md:grid-cols-4 md:gap-8 md:pb-20" id="education"
+  <section class="grid gap-6 border-t border-black py-10 md:grid-cols-5 md:gap-8 md:pb-20" id="education"
     aria-labelledby="education-title">
     <header>
       <h2 class="font-sans text-lg font-semibold leading-tight" id="education-title">Education</h2>
     </header>
-    <article class="grid grid-cols-4 gap-4 md:col-span-3 md:grid-cols-12 md:gap-6">
-      <p class="font-mono text-xs uppercase md:col-span-2">Expected June 2027</p>
-      <div class="col-span-3 md:col-span-4">
+    <article class="grid grid-cols-4 gap-4 md:col-span-4 md:grid-cols-12 md:gap-6">
+      <div class="col-span-3 md:col-span-5">
+        <p class="mb-2 font-mono text-xs uppercase">Expected June 2027</p>
         <h3 class="mb-1 font-sans font-semibold leading-snug">KTH Royal Institute of Technology</h3>
         <p class="text-sm italic text-neutral-600">B.Sc. Computer Engineering</p>
       </div>
-      <p class="col-span-3 col-start-2 md:col-span-6 md:col-start-auto">Data structures and algorithms, operating systems, networking, databases, information security, and embedded systems.</p>
+      <p class="col-span-3 md:col-span-7">Data structures and algorithms, operating systems, networking, databases, information security, and embedded systems.</p>
     </article>
   </section>
 
-  <section class="grid gap-6 border-t border-black py-10 md:grid-cols-4 md:gap-8 md:pb-20" id="experience"
+  <section class="grid gap-6 border-t border-black py-10 md:grid-cols-5 md:gap-8 md:pb-20" id="experience"
     aria-labelledby="experience-title">
     <header>
       <h2 class="font-sans text-lg font-semibold leading-tight" id="experience-title">Experience</h2>
     </header>
-    <div class="divide-y divide-neutral-300 md:col-span-3">
+    <div class="divide-y divide-neutral-300 md:col-span-4">
       {{ range hugo.Data.experience.roles }}
       <article class="grid grid-cols-4 gap-4 py-5 md:grid-cols-12 md:gap-6">
-        <p class="font-mono text-xs uppercase md:col-span-2">{{ .period }}</p>
-        <div class="col-span-3 md:col-span-4">
+        <div class="col-span-3 md:col-span-5">
+          <p class="mb-2 font-mono text-xs uppercase">{{ .period }}</p>
           <h3 class="mb-1 font-sans font-semibold leading-snug">{{ .company }}</h3>
           <p class="text-sm italic text-neutral-600">{{ .role }}</p>
         </div>
-        <div class="col-span-3 col-start-2 space-y-3 md:col-span-6 md:col-start-auto">
+        <div class="col-span-3 space-y-3 md:col-span-7">
           {{ range .details }}<p>{{ . }}</p>{{ end }}
         </div>
       </article>
@@ -66,16 +66,16 @@
     </div>
   </section>
 
-  <section class="grid gap-6 border-t border-black py-10 md:grid-cols-4 md:gap-8 md:pb-20" id="work"
+  <section class="grid gap-6 border-t border-black py-10 md:grid-cols-5 md:gap-8 md:pb-20" id="work"
     aria-labelledby="work-title">
     <header>
       <h2 class="font-sans text-lg font-semibold leading-tight" id="work-title">Selected work</h2>
     </header>
-    <ol class="m-0 list-none divide-y divide-neutral-300 p-0 md:col-span-3">
+    <ol class="m-0 list-none divide-y divide-neutral-300 p-0 md:col-span-4">
       {{ range where (where site.RegularPages "Section" "work") "Params.featured" true }}
       <li class="grid grid-cols-4 gap-4 py-5 md:grid-cols-12 md:gap-6">
-        <p class="font-mono text-xs uppercase md:col-span-2">{{ .Params.year }}</p>
-        <div class="col-span-3 md:col-span-4">
+        <div class="col-span-3 md:col-span-5">
+          <p class="mb-2 font-mono text-xs uppercase">{{ .Params.year }}</p>
           <h3 class="mb-1 font-sans font-semibold leading-snug"><a
               class="inline-flex items-baseline gap-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
               href="{{ .Params.external_url | default .RelPermalink }}" {{ with .Params.external_url }}target="_blank"
@@ -86,22 +86,22 @@
                 aria-hidden="true">open_in_new</span><span class="sr-only"> (opens in new tab)</span>{{ end }}</a></h3>
           <p class="text-sm italic text-neutral-600">{{ .Params.discipline }}</p>
         </div>
-        <p class="col-span-3 col-start-2 md:col-span-6 md:col-start-auto">{{ .Params.summary }}</p>
+        <p class="col-span-3 md:col-span-7">{{ .Params.summary }}</p>
       </li>
       {{ end }}
     </ol>
   </section>
 
-  <section class="grid gap-6 border-t border-black py-10 md:grid-cols-4 md:gap-8 md:pb-20" id="writing"
+  <section class="grid gap-6 border-t border-black py-10 md:grid-cols-5 md:gap-8 md:pb-20" id="writing"
     aria-labelledby="writing-title">
     <header>
       <h2 class="font-sans text-lg font-semibold leading-tight" id="writing-title">Reports and case studies</h2>
     </header>
-    <div class="divide-y divide-neutral-300 md:col-span-3">
+    <div class="divide-y divide-neutral-300 md:col-span-4">
       {{ range first 4 (where site.RegularPages.ByDate.Reverse "Section" "writing") }}
       <article class="grid grid-cols-4 gap-4 py-5 md:grid-cols-12 md:gap-6">
-        <p class="font-mono text-xs uppercase md:col-span-2">{{ .Date.Format "2006-01" }}</p>
-        <div class="col-span-3 md:col-span-4">
+        <div class="col-span-3 md:col-span-5">
+          <p class="mb-2 font-mono text-xs uppercase">{{ .Date.Format "2006-01" }}</p>
           <h3 class="font-sans font-semibold leading-snug"><a
               class="inline-flex items-baseline gap-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
               href="{{ .Params.external_url | default .RelPermalink }}" {{ with .Params.external_url }}target="_blank"
@@ -111,7 +111,7 @@
                 class="material-symbols-outlined self-center text-base! leading-none"
                 aria-hidden="true">open_in_new</span><span class="sr-only"> (opens in new tab)</span>{{ end }}</a></h3>
         </div>
-        <p class="col-span-3 col-start-2 md:col-span-6 md:col-start-auto">{{ .Params.summary }}</p>
+        <p class="col-span-3 md:col-span-7">{{ .Params.summary }}</p>
       </article>
       {{ end }}
       <p class="mt-4 font-sans text-sm"><a
@@ -122,12 +122,12 @@
     </div>
   </section>
 
-  <section class="grid gap-6 border-t border-black py-10 md:grid-cols-4 md:gap-8 md:pb-20" id="technical-scope"
+  <section class="grid gap-6 border-t border-black py-10 md:grid-cols-5 md:gap-8 md:pb-20" id="technical-scope"
     aria-labelledby="scope-title">
     <header>
       <h2 class="font-sans text-lg font-semibold leading-tight" id="scope-title">Technical scope</h2>
     </header>
-    <dl class="m-0 divide-y divide-neutral-300 md:col-span-3">
+    <dl class="m-0 divide-y divide-neutral-300 md:col-span-4">
       <div class="grid grid-cols-3 gap-4 py-2.5">
         <dt class="font-mono text-xs uppercase">Languages</dt>
         <dd class="col-span-2 m-0">Java, Kotlin, C, C#, TypeScript, SQL</dd>
