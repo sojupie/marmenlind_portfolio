@@ -1,6 +1,6 @@
 ---
 title: 'Writing'
-description: 'Technical reports and case studies by Olle Marmenlind.'
+description: 'Technical reports, blog posts, papers, etc.'
 ---
 
-Technical reports, applied research, and product case studies.
+Technical reports, blog posts, papers, etc.
