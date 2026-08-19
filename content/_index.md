@@ -1,11 +1,16 @@
 ---
 title: 'Olle Marmenlind'
 description: 'Computer Engineering undergraduate with experience in backend and data systems, embedded software, and technical product ownership.'
-lead: 'Computer Engineering undergraduate with experience in backend and data systems, embedded software, and technical product ownership. Built PostgreSQL ingestion and reporting systems, multithreaded FreeRTOS firmware, and commerce platforms serving more than 200,000 users. I’m interested in systems engineering across backend infrastructure, networking, embedded systems, and platform software, particularly where software interacts closely with the underlying system.'
+lead: 'Work as Technical Product Owner at Sevan AB while completing a B.Sc. in Computer Engineering at KTH, looking to transition into becoming a systems engineer in 2027.'
 ---
 
-I work as Technical Product Owner at Sevan AB while completing a B.Sc. in Computer Engineering at KTH.
+A summary of my engineering experience:
+- Built a fullstack web app and data ingestion system for a software-dev consultant company specializing in e-commerce systems with over 35 client storefronts (Motillo).
+- Written C/FreeRTOS embedded firmware as well as a PC data visualization tool for fiber-optic sensing systems/hardware for the global industry leader in FBG's and fiber-optic sensing systems, Proximion (a Hexatronic Group subsidary).
+- Lead internal development of internal tools (sales catalog/pricelist generator, CRM, dashboards) at Sevan. Managed software developer interns.
 
-My engineering experience has grown out of real industry problems across several domains: backend and data systems for Motillo, embedded C and FreeRTOS development for Proximion, Kotlin/Android development, and internal software at Sevan.
-
-I am broadly interested in systems engineering and technically demanding software, including backend infrastructure, networking, embedded systems, and platform-level development. My focus is on building strong, transferable engineering fundamentals across languages, platforms, and problem domains.
+Broadly interested in systems engineering and performance-oriented engineering:
+- Managed runtimes and compilers
+- Backend and network infrastructure
+- Embedded systems
+- Platform-level development
