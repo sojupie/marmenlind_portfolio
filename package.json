@@ -3,9 +3,9 @@
   "private": true,
   "packageManager": "pnpm@11.9.0",
   "scripts": {
-    "css": "tailwindcss -i ./assets/css/main.css -o ./static/css/main.css --minify",
-    "dev": "pnpm run --parallel \"/^dev:.*/\"",
-    "dev:css": "tailwindcss -i ./assets/css/main.css -o ./static/css/main.css --watch",
+    "css": "tailwindcss -i ./assets/css/main.css -o ./assets/generated.css --minify",
+    "dev": "pnpm css && pnpm run --parallel \"/^dev:.*/\"",
+    "dev:css": "tailwindcss -i ./assets/css/main.css -o ./assets/generated.css --watch",
     "dev:hugo": "hugo server -D",
     "build": "pnpm css && hugo --gc --minify --cleanDestinationDir"
   },

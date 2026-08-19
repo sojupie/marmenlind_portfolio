@@ -6,7 +6,7 @@ enableRobotsTXT = true
 [params]
   author = 'Olle Marmenlind'
   description = 'Software engineer and technical product owner working across backend infrastructure, embedded systems, and digital products.'
-  email = 'ollemarmenlind02@gmail.com'
+  email = 'olle@marmenlind.com'
   github = 'https://github.com/sojupie'
   cv = '/assets/docs/CV_OLLE_MARMENLIND_RESUME.pdf'
 

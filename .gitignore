@@ -9,3 +9,4 @@ resources/_gen/
 .hugo_build.lock
 node_modules/
 static/css/main.css
+assets/generated.css

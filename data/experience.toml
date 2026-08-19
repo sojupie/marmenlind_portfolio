@@ -9,7 +9,7 @@ details = [
 [[roles]]
 company = 'Motillo AB'
 role = 'Software Engineer — KTH Industry Project'
-period = '2026'
+period = 'March–June 2026'
 details = [
   'Built a React/TypeScript application and ASP.NET Core backend for monitoring Litium commerce environments, sales metrics, uptime, and system health.',
   'Implemented asynchronous order ingestion with Hangfire and Polly, an Elasticsearch-backed extraction API, and PostgreSQL reporting with historical materialized-view rollups merged with live data. Benchmarked the reporting design using four million simulated orders, reducing representative query time from roughly 330 ms to 20 ms.'
@@ -18,7 +18,7 @@ details = [
 [[roles]]
 company = 'Proximion AB'
 role = 'R&D Software Engineer, University–Industry Project'
-period = '2025–2026'
+period = 'October 2025–January 2026'
 details = [
   'Built a multithreaded C and FreeRTOS processing pipeline on RISC-V for high-frequency Fiber Bragg grating sensor data. Implemented non-blocking inter-task communication, a deterministic binary protocol between the MCU and PC host, crash-state capture hooks, and a C#/.NET host application.',
   'Created a cross-platform GNU Make build system and self-hosted Linux CI pipeline for reproducible builds, formatting, and release generation.'
