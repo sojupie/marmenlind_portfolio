@@ -3,6 +3,17 @@
 @source "../../layouts";
 @source "../../content";
 
+@layer base {
+  .prose table {
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: max-content;
+  }
+}
+
 @theme {
   --font-sans: "Inter", Arial, sans-serif;
   --font-serif: "Noto Serif", Georgia, serif;
