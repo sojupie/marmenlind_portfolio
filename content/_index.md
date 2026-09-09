@@ -9,7 +9,7 @@ A summary of my engineering experience:
 - Written C/FreeRTOS embedded firmware as well as a PC data visualization tool for fiber-optic sensing systems/hardware for the global industry leader in FBG's and fiber-optic sensing systems, Proximion (a Hexatronic Group subsidary).
 - Lead internal development of internal tools (sales catalog/pricelist generator, CRM, dashboards) at Sevan.
 
-Broadly interested in systems engineering and platform engineering:
+Broadly interested in systems engineering and performance oriented engineering:
 - Managed runtimes
 - Platform and network infrastructure
 - Embedded systems
