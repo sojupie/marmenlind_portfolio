@@ -1,6 +1,7 @@
 ---
 title: 'Motillo ADWAIS'
 slug: 'adwais'
+date: 2026-06-30
 description: 'Monitoring and analytics platform for Litium commerce environments.'
 summary: 'Monitoring and analytics platform combining asynchronous order ingestion, PostgreSQL reporting, uptime monitoring, and internal administration tools.'
 year: 'March–June 2026'
@@ -15,6 +16,8 @@ legacy_full: true
 # ADWAIS
 
 A multi-tenant platform for e-commerce analytics, endpoint monitoring, and team communication.
+
+<p class="project-links flex flex-wrap gap-4"><a class="inline-flex items-center gap-2 no-underline" href="https://github.com/sojupie/ADWAIS" target="_blank" rel="noopener noreferrer"><img class="project-github-icon size-8" src="/assets/img/github-invertocat.svg" alt=""/> <span class="underline decoration-1 underline-offset-3">GitHub repository</span><span class="sr-only"> (opens in new tab)</span></a> <a class="inline-flex items-center gap-2 no-underline" href="https://adwais.marmenlind.com/swagger/index.html" target="_blank" rel="noopener noreferrer"><img class="project-github-icon size-8" src="/assets/img/swagger-api-icon.svg" alt=""/> <span class="underline decoration-1 underline-offset-3">Swagger API</span><span class="sr-only"> (opens in new tab)</span></a></p>
 
 [Live interactive demo](https://adwais.marmenlind.com)
 
@@ -45,7 +48,7 @@ graph TD
 
 Other root files: `pnpm-workspace.yaml`, `.env.example`.
 
-Docs: [authentication](docs/authentication.md), [Shopify order source](docs/shopify-integration.md).
+Docs: [authentication](https://github.com/sojupie/ADWAIS/blob/main/docs/authentication.md), [Shopify order source](https://github.com/sojupie/ADWAIS/blob/main/docs/shopify-integration.md).
 
 ## Prerequisites
 
@@ -147,14 +150,14 @@ pnpm codegen
 
 ## License
 
-This repository is licensed under the MIT License. See [LICENSE](./LICENSE) for the full terms.
+This repository is licensed under the MIT License. See [LICENSE](https://github.com/sojupie/ADWAIS/blob/main/LICENSE) for the full terms.
 
 The MIT copyright and permission notices must remain in source distributions
 and substantial portions of the software.
 
 ## Contributing
 
-By contributing, you agree to the terms in [CONTRIBUTING.md](./CONTRIBUTING.md).
+By contributing, you agree to the terms in [CONTRIBUTING.md](https://github.com/sojupie/ADWAIS/blob/main/CONTRIBUTING.md).
 
 ## Acknowledgements
 

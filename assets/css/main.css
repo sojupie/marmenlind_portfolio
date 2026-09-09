@@ -4,6 +4,42 @@
 @source "../../content";
 
 @layer base {
+  .adwais-embed {
+    height: 16rem;
+    overflow: hidden;
+    border: 1px solid #a3a3a3;
+  }
+
+  .adwais-embed iframe {
+    width: 357.14%;
+    height: 900px;
+    transform: scale(0.28);
+    transform-origin: top left;
+    border: 0;
+  }
+
+  @media (min-width: 640px) {
+    .adwais-embed {
+      height: 34rem;
+    }
+
+    .adwais-embed iframe {
+      width: 238.1%;
+      transform: scale(0.42);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .adwais-embed {
+      height: 34rem;
+    }
+
+    .adwais-embed iframe {
+      width: 166.67%;
+      transform: scale(0.6);
+    }
+  }
+
   .prose table {
     display: block;
     max-width: 100%;

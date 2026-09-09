@@ -3,6 +3,7 @@ company = 'Sevan AB'
 role = 'Technical Product Owner'
 period = '2022–present'
 details = [
+  'Worked as a UI/UX designer for ~6 months and then as a project manager for another ~6 months. Later promoted to product owner.',
   'Own the roadmap for B2B and B2C commerce platforms serving more than 200,000 users and 300 business customers. Translated business requirements into more than 400 development tickets, including API schemas and data models, while coordinating internal teams, external partners, and vendors.'
 ]
 

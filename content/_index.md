@@ -7,7 +7,7 @@ lead: 'Work as Technical Product Owner at Sevan AB while completing a B.Sc. in C
 A summary of my engineering experience:
 - Built a fullstack web app and data ingestion system for a software-dev consultant company specializing in e-commerce systems with over 35 client storefronts (Motillo).
 - Written C/FreeRTOS embedded firmware as well as a PC data visualization tool for fiber-optic sensing systems/hardware for the global industry leader in FBG's and fiber-optic sensing systems, Proximion (a Hexatronic Group subsidary).
-- Lead internal development of internal tools (sales catalog/pricelist generator, CRM, dashboards) at Sevan. Managed software developer interns.
+- Lead internal development of internal tools (sales catalog/pricelist generator, CRM, dashboards) at Sevan.
 
 Broadly interested in systems engineering and platform engineering:
 - Managed runtimes
