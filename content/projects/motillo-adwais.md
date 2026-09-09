@@ -2,8 +2,8 @@
 title: 'Motillo ADWAIS'
 slug: 'adwais'
 date: 2026-06-30
-description: 'Monitoring and analytics platform for Litium commerce environments.'
-summary: 'Monitoring and analytics platform combining asynchronous order ingestion, PostgreSQL reporting, uptime monitoring, and internal administration tools.'
+description: 'Multi-organization monitoring and analytics platform for Litium commerce environments.'
+summary: 'Multi-organization monitoring and analytics platform combining asynchronous order ingestion, PostgreSQL reporting, uptime monitoring, and internal administration tools.'
 year: 'March–June 2026'
 discipline: 'C# / ASP.NET Core / PostgreSQL / TypeScript / React'
 external_url: 'https://adwais.marmenlind.com'
@@ -15,7 +15,7 @@ legacy_full: true
 
 # ADWAIS
 
-A multi-tenant platform for e-commerce analytics, endpoint monitoring, and team communication.
+A multi-organization platform for e-commerce analytics, endpoint monitoring, and team communication.
 
 <p class="project-links flex flex-wrap gap-4"><a class="inline-flex items-center gap-2 no-underline" href="https://github.com/sojupie/ADWAIS" target="_blank" rel="noopener noreferrer"><img class="project-github-icon size-8" src="/assets/img/github-invertocat.svg" alt=""/> <span class="underline decoration-1 underline-offset-3">GitHub repository</span><span class="sr-only"> (opens in new tab)</span></a> <a class="inline-flex items-center gap-2 no-underline" href="https://adwais.marmenlind.com/swagger/index.html" target="_blank" rel="noopener noreferrer"><img class="project-github-icon size-8" src="/assets/img/swagger-api-icon.svg" alt=""/> <span class="underline decoration-1 underline-offset-3">Swagger API</span><span class="sr-only"> (opens in new tab)</span></a></p>
 
@@ -32,6 +32,7 @@ graph TD
     API -->|EF Core / SQL| DB[(PostgreSQL Database)]
     Hangfire[Hangfire Background Service] -->|Queue Jobs| DB
     API -.->|Enqueue Jobs| Hangfire
+    API -.->|Optional OTLP| Telemetry[Aspire Dashboard or OTLP receiver]
 ```
 
 ## Directory structure
@@ -48,7 +49,7 @@ graph TD
 
 Other root files: `pnpm-workspace.yaml`, `.env.example`.
 
-Docs: [authentication](https://github.com/sojupie/ADWAIS/blob/main/docs/authentication.md), [Shopify order source](https://github.com/sojupie/ADWAIS/blob/main/docs/shopify-integration.md).
+Docs: [authentication](https://github.com/sojupie/ADWAIS/blob/main/docs/authentication.md), [multi-organization model](https://github.com/sojupie/ADWAIS/blob/main/docs/multi-organization.md), [observability](https://github.com/sojupie/ADWAIS/blob/main/docs/observability-overview.md), [Shopify order source](https://github.com/sojupie/ADWAIS/blob/main/docs/shopify-integration.md).
 
 ## Prerequisites
 
@@ -94,6 +95,15 @@ VITE_DEMO_MODE=true
 Demo mode adds a login option that requests a Viewer token from `/api/demo/token`. OIDC settings are not needed in demo mode.
 
 Outside demo mode, set `VITE_OIDC_AUTHORITY` and `VITE_OIDC_CLIENT_ID` in the frontend. Set `Authentication:OidcAuthority` and `Authentication:OidcAudience` in the API.
+
+The API exports live traces, metrics, and structured logs through OTLP only when an endpoint is configured. Set either `OpenTelemetry__OtlpEndpoint` (the preferred .NET configuration key) or `OTEL_EXPORTER_OTLP_ENDPOINT` in the API environment, for example:
+
+```env
+# apps/server/ADWAIS/src/.env
+OpenTelemetry__OtlpEndpoint=http://localhost:18889
+```
+
+This is suitable for an Aspire Dashboard or another OTLP receiver. Leave the setting unset when no telemetry backend is running; the ADWAIS diagnostics pages and API continue to work from the application database.
 
 3. Start the database:
 
