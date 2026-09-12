@@ -1,7 +1,7 @@
 ---
 title: 'Olle Marmenlind'
 description: 'Computer Engineering undergraduate with experience in backend and data systems, embedded software, and technical product ownership.'
-lead: 'Work as Technical Product Owner at Sevan AB while completing a B.Sc. in Computer Engineering at KTH, looking to transition into becoming a systems engineer in 2027.'
+lead: 'Work as Technical Product Owner at Sevan AB while completing a B.Sc. in Computer Engineering at KTH, looking to transition into systems and software engineering in 2027.'
 ---
 
 A summary of my engineering experience:
