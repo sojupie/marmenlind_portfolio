@@ -8,10 +8,7 @@ discipline: 'Kotlin / Android / Firestore / REST'
 featured: true
 weight: 10
 external_url: 'https://github.com/sojupie/Scan2Go_PoC'
-legacy_full: true
 ---
-
-# Scan-to-Order (Android PoC)
 
 An Android Proof-of-Concept streamlining B2B inventory management via on-device barcode scanning.
 

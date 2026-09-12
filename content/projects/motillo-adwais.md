@@ -10,10 +10,7 @@ external_url: 'https://adwais.marmenlind.com'
 github_url: 'https://github.com/sojupie/ADWAIS'
 featured: true
 weight: 20
-legacy_full: true
 ---
-
-# ADWAIS
 
 A multi-organization platform for e-commerce analytics, endpoint monitoring, and team communication.
 

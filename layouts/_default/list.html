@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="mx-auto w-full max-w-6xl px-5 py-12 md:px-8 md:py-16 lg:pb-28 xl:px-12">
   <header class="mb-16 grid md:grid-cols-5 md:gap-x-8">
-    <h1 class="mb-4 font-sans text-4xl font-semibold leading-tight tracking-tight md:col-span-4 md:col-start-2 md:text-5xl">{{ .Title }}</h1>
+    <h1 class="mb-4 font-sans text-4xl font-medium leading-tight tracking-tight md:col-span-4 md:col-start-2 md:text-5xl">{{ .Title }}</h1>
     <div class="max-w-2xl md:col-span-4 md:col-start-2">{{ .Content }}</div>
   </header>
   <div class="grid md:grid-cols-5 md:gap-x-8">
@@ -9,20 +9,20 @@
     {{ range .Pages.ByDate.Reverse }}
     <article class="grid grid-cols-4 gap-4 py-5 mt-12 md:grid-cols-12 md:gap-6">
       <div class="col-span-4 md:col-span-5">
-        <p class="mb-2 font-mono text-xs uppercase">{{ with .Date }}{{ .Format "2006-01" }}{{ end }}</p>
+        <p class="type-meta mb-2">{{ with .Date }}{{ .Format "2006-01" }}{{ end }}</p>
         {{ if .Params.github_url }}
-        <h2 class="font-sans font-semibold leading-snug"><a class="underline decoration-1 decoration-neutral-400 underline-offset-4 hover:decoration-black" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <h2 class="type-title"><a class="underline decoration-1 decoration-neutral-400 underline-offset-4 hover:decoration-black" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         {{ else }}
         {{ if in .Params.external_url "github.com" }}
-        <h2 class="font-sans font-semibold leading-snug"><a class="underline decoration-1 decoration-neutral-400 underline-offset-4 hover:decoration-black" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <h2 class="type-title"><a class="underline decoration-1 decoration-neutral-400 underline-offset-4 hover:decoration-black" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         {{ else }}
-        <h2 class="font-sans font-semibold leading-snug"><a class="inline-flex items-baseline gap-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="{{ .Params.external_url | default .RelPermalink }}" {{ with .Params.external_url }}target="_blank" rel="noopener noreferrer"{{ end }}><span class="underline decoration-1 decoration-neutral-400 underline-offset-4 hover:decoration-black">{{ .Title }}</span>{{ with .Params.external_url }}<span class="material-symbols-outlined self-center text-base! leading-none" aria-hidden="true">open_in_new</span><span class="sr-only"> (opens in new tab)</span>{{ end }}</a></h2>
+        <h2 class="type-title"><a class="inline-flex items-baseline gap-1 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="{{ .Params.external_url | default .RelPermalink }}" {{ with .Params.external_url }}target="_blank" rel="noopener noreferrer"{{ end }}><span class="underline decoration-1 decoration-neutral-400 underline-offset-4 hover:decoration-black">{{ .Title }}</span>{{ with .Params.external_url }}<span class="material-symbols-outlined self-center text-base! leading-none" aria-hidden="true">open_in_new</span><span class="sr-only"> (opens in new tab)</span>{{ end }}</a></h2>
         {{ end }}
         {{ end }}
         <p class="text-sm italic text-neutral-600">{{ .Params.discipline }}</p>
         {{ if .Params.github_url }}
         <div class="mt-3 flex flex-wrap items-center gap-4">
-          <a class="inline-flex items-center gap-2 rounded-full border border-black px-3 py-1.5 font-sans text-sm no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="{{ .Params.external_url }}" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-lg! leading-none" aria-hidden="true">play_arrow</span><span>View interactive demo</span><span class="sr-only"> (opens in new tab)</span></a>
+          <a class="inline-flex items-center gap-2 rounded-full border border-black px-3 py-1.5 font-mono text-sm no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="{{ .Params.external_url }}" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-lg! leading-none" aria-hidden="true">play_arrow</span><span>View interactive demo</span><span class="sr-only"> (opens in new tab)</span></a>
           <a class="inline-flex items-center no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="{{ .Params.github_url }}" target="_blank" rel="noopener noreferrer" aria-label="View ADWAIS source on GitHub"><img class="project-github-icon size-12 shrink-0" src="/assets/img/github-invertocat.svg" alt=""/><span class="sr-only">GitHub (opens in new tab)</span></a>
           <a class="inline-flex items-center no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="https://adwais.marmenlind.com/swagger/index.html" target="_blank" rel="noopener noreferrer" aria-label="View ADWAIS Swagger API documentation"><img class="project-github-icon size-12 shrink-0" src="/assets/img/swagger-api-icon.svg" alt=""/><span class="sr-only">Swagger API documentation (opens in new tab)</span></a>
         </div>

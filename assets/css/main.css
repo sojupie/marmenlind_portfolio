@@ -3,7 +3,135 @@
 @source "../../layouts";
 @source "../../content";
 
+@font-face {
+  font-family: "Roslindale Display";
+  src: url("/assets/fonts/RoslindaleDisplay-Light-Edu.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roslindale Display";
+  src: url("/assets/fonts/RoslindaleDisplay-Medium-Edu.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roslindale Text";
+  src: url("/assets/fonts/RoslindaleText-Regular-Edu.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roslindale Deck";
+  src: url("/assets/fonts/RoslindaleDeckNarrow-Regular-Edu.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roslindale Deck";
+  src: url("/assets/fonts/RoslindaleDeckNarrow-Medium-Edu.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roslindale Text";
+  src: url("/assets/fonts/RoslindaleText-Italic-Edu.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roslindale Text";
+  src: url("/assets/fonts/RoslindaleText-SemiBold-Edu.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roslindale Text";
+  src: url("/assets/fonts/RoslindaleText-Bold-Edu.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
 @layer base {
+  :root {
+    --type-body-size: 1rem;
+    --type-body-leading: 1.5;
+    --type-intro-size: 1.25rem;
+    --type-intro-leading: 1.4;
+    --type-title-size: 1.125rem;
+    --type-title-leading: 1.333333;
+    --type-subsection-size: 1.0625rem;
+    --type-subsection-leading: 1.4;
+    --type-section-leading: 1.3;
+    --type-meta-size: 0.875rem;
+    --type-meta-leading: 1.35;
+  }
+
+  .type-body {
+    font-family: var(--font-serif);
+    font-size: var(--type-body-size);
+    line-height: var(--type-body-leading);
+  }
+
+  .prose.type-body {
+    line-height: var(--type-body-leading);
+  }
+
+  .type-intro {
+    font-family: var(--font-deck);
+    font-size: var(--type-intro-size);
+    line-height: var(--type-intro-leading);
+  }
+
+  .type-title {
+    font-family: var(--font-deck);
+    font-size: var(--type-title-size);
+    font-weight: 500;
+    line-height: var(--type-title-leading);
+  }
+
+  .type-subsection {
+    font-family: var(--font-deck);
+    font-size: var(--type-subsection-size);
+    font-weight: 500;
+    line-height: var(--type-subsection-leading);
+  }
+
+  .type-section {
+    font-family: var(--font-deck);
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: var(--type-section-leading);
+  }
+
+  .type-meta {
+    font-family: var(--font-serif);
+    font-size: var(--type-meta-size);
+    line-height: var(--type-meta-leading);
+  }
+
+  .type-mono {
+    font-family: var(--font-mono);
+    font-size: var(--type-meta-size);
+    line-height: var(--type-meta-leading);
+  }
+
   .adwais-embed {
     height: 16rem;
     overflow: hidden;
@@ -51,8 +179,9 @@
 }
 
 @theme {
-  --font-sans: "Inter", Arial, sans-serif;
-  --font-serif: "Noto Serif", Georgia, serif;
-  --font-mono: "Spline Sans Mono", Consolas, monospace;
+  --font-sans: "Roslindale Display", Georgia, serif;
+  --font-serif: "Roslindale Text", Georgia, serif;
+  --font-deck: "Roslindale Deck", Georgia, serif;
+  --font-mono: "JetBrains Mono", Consolas, monospace;
   --background-image-paper: url("/assets/img/paper.jpg");
 }

@@ -8,5 +8,6 @@ public/
 resources/_gen/
 .hugo_build.lock
 node_modules/
+DJR-Fonts-2026-09-12-df37eda-Edu/
 static/css/main.css
 assets/generated.css
