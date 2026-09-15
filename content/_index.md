@@ -10,7 +10,8 @@ A summary of my engineering experience:
 - Lead internal development of internal tools (sales catalog/pricelist generator, CRM, dashboards) at Sevan.
 
 Broadly interested in systems engineering and performance oriented engineering:
-- Managed runtimes
+- System design
+- Runtimes
 - Platform and network infrastructure
-- Embedded systems
 - Performance-oriented backend development
+- High speed I/O
