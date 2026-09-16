@@ -5,8 +5,10 @@
   "scripts": {
     "css": "tailwindcss -i ./assets/css/main.css -o ./assets/generated.css --minify",
     "dev": "pnpm css && pnpm run --parallel \"/^dev:.*/\"",
-    "dev:css": "tailwindcss -i ./assets/css/main.css -o ./assets/generated.css --watch",
+    "dev:css": "tailwindcss -i ./assets/css/main.css -o ./assets/generated.css --watch --minify",
     "dev:hugo": "hugo server -D",
+    "preview": "hugo server -D --disableLiveReload --minify",
+    "subset:fonts": "python scripts/subset_fonts.py",
     "build": "pnpm css && hugo --gc --minify --cleanDestinationDir"
   },
   "devDependencies": {

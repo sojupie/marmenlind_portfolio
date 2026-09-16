@@ -3,14 +3,6 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FMRRZZWBN6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-FMRRZZWBN6');
-  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{
     end }}</title>
@@ -18,24 +10,73 @@
   <meta name="author" content="{{ site.Params.author }}">
   <meta name="theme-color" content="#f5f5f5">
   <link rel="canonical" href="{{ .Permalink }}">
+  {{ partial "css.html" . }}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_back%2Carrow_forward%2Cchevron_right%2Copen_in_new%2Cplay_arrow&display=block"
-    rel="stylesheet">
-  {{ partial "css.html" . }}
+  <link rel="preload" href="/assets/fonts/RoslindaleDisplay-Medium-Edu.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/RoslindaleText-Regular-Edu.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/RoslindaleDeckNarrow-Regular-Edu.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_back%2Carrow_forward%2Cchevron_right%2Copen_in_new%2Cplay_arrow&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_back%2Carrow_forward%2Cchevron_right%2Copen_in_new%2Cplay_arrow&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_back%2Carrow_forward%2Cchevron_right%2Copen_in_new%2Cplay_arrow&display=swap">
+  </noscript>
   <link rel="icon" href="/assets/img/marmeno-logo.png">
 </head>
 
 <body
-  class="type-body relative flex min-h-screen flex-col bg-white text-base text-black antialiased before:pointer-events-none before:absolute before:inset-0 before:z-50 before:bg-paper before:bg-repeat before:opacity-15 before:mix-blend-multiply print:before:hidden">
+  class="type-body relative flex min-h-screen flex-col bg-white text-base text-black antialiased before:pointer-events-none before:absolute before:inset-0 before:z-30 before:bg-paper before:bg-repeat before:opacity-15 before:mix-blend-multiply print:before:hidden">
   <a class="fixed left-3 top-3 z-50 -translate-y-24 bg-black px-3 py-2 font-sans text-xs text-white focus:translate-y-0 focus:outline-2 focus:outline-offset-2 focus:outline-black"
     href="#main">Skip to content</a>
   {{ partial "header.html" . }}
   {{ if not .IsHome }}{{ partial "breadcrumbs.html" . }}{{ end }}
   <main class="flex-1" id="main">{{ block "main" . }}{{ end }}</main>
   {{ partial "footer.html" . }}
+  <script>
+    (function(){
+      var iframes = document.querySelectorAll('iframe[data-src]');
+      if (!iframes.length) return;
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if (entry.isIntersecting) {
+              var el = entry.target;
+              el.src = el.getAttribute('data-src');
+              el.removeAttribute('data-src');
+              io.unobserve(el);
+            }
+          });
+        }, { rootMargin: '300px 0px' });
+        iframes.forEach(function(f){ io.observe(f); });
+      } else {
+        iframes.forEach(function(f){ f.src = f.getAttribute('data-src'); });
+      }
+    })();
+  </script>
+  {{ if hugo.IsProduction }}
+  <!-- Google tag (gtag.js) -->
+  <script>
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FMRRZZWBN6');
+
+      function loadGtag(){
+        if (window._gtagLoaded) return;
+        window._gtagLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-FMRRZZWBN6';
+        document.head.appendChild(s);
+      }
+      ['scroll', 'pointerdown', 'keydown'].forEach(function(e) {
+        window.addEventListener(e, loadGtag, { once: true, passive: true });
+      });
+      setTimeout(loadGtag, 7000);
+    }
+  </script>
+  {{ end }}
 </body>
 
 </html>

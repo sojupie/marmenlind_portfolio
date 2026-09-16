@@ -4,7 +4,7 @@
     <h1
       class="mb-6 font-sans text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:col-span-4 md:col-start-2">
       {{ .Title }}</h1>
-    <p class="type-intro mb-12 max-w-3xl md:col-span-4 md:col-start-2 md:text-2xl">{{ .Params.lead }}</p>
+    <p class="type-intro mb-12 max-w-none md:col-span-4 md:col-start-2 md:text-2xl">{{ .Params.lead }}</p>
     <dl class="type-meta m-0 divide-y divide-neutral-300 border-t border-black md:col-span-4 md:col-start-2">
       <div class="grid grid-cols-3 gap-4 py-2.5">
         <dt>Location</dt>
@@ -26,7 +26,7 @@
     <header>
       <h2 class="type-section" id="profile-title">Profile</h2>
     </header>
-    <div class="prose prose-neutral max-w-3xl prose-p:mt-0 prose-p:mb-5 prose-p:text-black md:col-span-4">{{ .Content }}
+    <div class="prose prose-neutral max-w-none prose-p:mt-0 prose-p:mb-5 prose-p:text-black md:col-span-4">{{ .Content }}
     </div>
   </section>
 
@@ -120,7 +120,8 @@
         {{ if eq .Title "Motillo ADWAIS" }}
         <div class="col-span-4 mt-6 md:col-span-12">
           <div class="adwais-embed" aria-label="ADWAIS live demo">
-            <iframe src="https://adwais.marmenlind.com" title="ADWAIS live demo" loading="lazy"></iframe>
+            <iframe data-src="https://adwais.marmenlind.com" title="ADWAIS live demo" loading="lazy"></iframe>
+            <noscript><iframe src="https://adwais.marmenlind.com" title="ADWAIS live demo"></iframe></noscript>
           </div>
         </div>
         {{ end }}

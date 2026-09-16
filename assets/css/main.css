@@ -35,13 +35,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Roslindale Deck";
-  src: url("/assets/fonts/RoslindaleDeckNarrow-Medium-Edu.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
 
 @font-face {
   font-family: "Roslindale Text";
@@ -183,6 +176,6 @@
   --font-sans: "Roslindale Display", Georgia, serif;
   --font-serif: "Roslindale Text", Georgia, serif;
   --font-deck: "Roslindale Deck", Georgia, serif;
-  --font-mono: "JetBrains Mono", Consolas, monospace;
-  --background-image-paper: url("/assets/img/paper.jpg");
+  --font-mono: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --background-image-paper: url("/assets/img/paper.webp");
 }

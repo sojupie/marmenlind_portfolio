@@ -7,9 +7,9 @@
 <article class="mx-auto grid w-full max-w-6xl px-5 py-12 md:grid-cols-5 md:gap-x-8 md:px-8 md:py-16 lg:pb-28 xl:px-12">
   <header class="grid border-b border-black pb-12 md:col-span-5 md:grid-cols-5 md:gap-x-8">
     <p class="type-meta mb-10 md:col-span-4">{{ with .Date }}{{ .Format "2006-01-02" }}{{ else }}{{ .Params.year }}{{ end }}</p>
-    <h1 class="mb-5 max-w-4xl font-sans text-4xl font-medium leading-tight tracking-tight md:col-span-3 md:col-start-2 md:text-5xl">{{ .Title }}</h1>
-    <p class="type-intro mb-8 max-w-2xl md:col-span-3 md:col-start-2">{{ .Description }}</p>
-    <dl class="m-0 w-full max-w-lg space-y-2 md:col-span-3 md:col-start-2">
+    <h1 class="mb-5 font-sans text-4xl font-medium leading-tight tracking-tight md:col-span-4 md:col-start-2 md:text-5xl">{{ .Title }}</h1>
+    <p class="type-intro mb-8 md:col-span-4 md:col-start-2">{{ .Description }}</p>
+    <dl class="m-0 w-full space-y-2 md:col-span-4 md:col-start-2">
       {{ with .Params.discipline }}
       <div class="type-meta grid grid-cols-3 gap-4"><dt>Area</dt><dd class="col-span-2 m-0">{{ . }}</dd></div>
       {{ end }}
@@ -18,7 +18,7 @@
       {{ end }}
     </dl>
   </header>
-  <div class="prose type-body prose-neutral max-w-3xl pt-14 prose-headings:font-deck prose-headings:font-normal prose-headings:italic prose-headings:text-black prose-h1:font-sans prose-h1:not-italic prose-a:text-black prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:decoration-2 prose-blockquote:border-black prose-blockquote:text-black prose-code:font-mono prose-img:border prose-img:border-neutral-400 prose-li:text-black prose-p:text-black prose-strong:text-black prose-pre:rounded-none prose-pre:border prose-pre:border-neutral-400 prose-pre:bg-white prose-pre:font-mono prose-pre:text-black prose-table:font-mono prose-table:text-xs md:col-span-4 md:col-start-2">{{ .Content }}</div>
+  <div class="prose type-body prose-neutral max-w-none pt-14 prose-headings:font-deck prose-headings:font-normal prose-headings:italic prose-headings:text-black prose-h1:font-sans prose-h1:not-italic prose-a:text-black prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:decoration-2 prose-blockquote:border-black prose-blockquote:text-black prose-code:font-mono prose-img:border prose-img:border-neutral-400 prose-li:text-black prose-p:text-black prose-strong:text-black prose-pre:rounded-none prose-pre:border prose-pre:border-neutral-400 prose-pre:bg-white prose-pre:font-mono prose-pre:text-black prose-table:font-mono prose-table:text-xs md:col-span-4 md:col-start-2">{{ .Content }}</div>
 </article>
 {{ end }}
 {{ end }}

@@ -18,6 +18,10 @@ A multi-organization platform for e-commerce analytics, endpoint monitoring, and
 
 [Live interactive demo](https://adwais.marmenlind.com)
 
+<div class="adwais-embed my-6" aria-label="ADWAIS live demo">
+  <iframe src="https://adwais.marmenlind.com" title="ADWAIS live demo" loading="lazy"></iframe>
+</div>
+
 ## Architecture
 
 A monorepo managed with pnpm workspaces.
