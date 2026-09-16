@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ if .Params.legacy_full }}
-<div class="prose type-body prose-neutral mx-auto max-w-6xl break-words px-5 py-12 prose-headings:font-deck prose-headings:font-normal prose-headings:italic prose-headings:text-black prose-h1:font-sans prose-h1:not-italic prose-h1:font-medium prose-h1:text-left prose-h1:text-4xl prose-h1:leading-tight prose-h1:tracking-tight prose-a:text-black prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:decoration-2 prose-blockquote:text-black prose-code:font-mono prose-li:text-black prose-p:text-black prose-strong:text-black prose-table:font-mono prose-table:text-xs prose-th:font-mono prose-th:text-black md:py-16 lg:py-20">
+<div class="prose type-body prose-neutral mx-auto max-w-6xl break-words px-5 py-12 prose-headings:font-deck prose-headings:font-normal prose-headings:italic prose-headings:text-black prose-h1:font-sans prose-h1:not-italic prose-h1:font-medium prose-h1:text-left prose-h1:text-4xl prose-h1:leading-tight prose-h1:tracking-tight prose-a:text-black prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:decoration-2 prose-blockquote:text-black prose-code:font-mono prose-li:text-black prose-p:text-black prose-strong:text-black prose-table:font-mono prose-table:text-base prose-th:font-mono prose-th:text-black md:py-16 lg:py-20">
   {{ .Content }}
 </div>
 {{ else }}
@@ -18,7 +18,7 @@
       {{ end }}
     </dl>
   </header>
-  <div class="prose type-body prose-neutral max-w-none pt-14 prose-headings:font-deck prose-headings:font-normal prose-headings:italic prose-headings:text-black prose-h1:font-sans prose-h1:not-italic prose-a:text-black prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:decoration-2 prose-blockquote:border-black prose-blockquote:text-black prose-code:font-mono prose-img:border prose-img:border-neutral-400 prose-li:text-black prose-p:text-black prose-strong:text-black prose-pre:rounded-none prose-pre:border prose-pre:border-neutral-400 prose-pre:bg-white prose-pre:font-mono prose-pre:text-black prose-table:font-mono prose-table:text-xs md:col-span-4 md:col-start-2">{{ .Content }}</div>
+  <div class="prose type-body prose-neutral max-w-none pt-14 prose-headings:font-deck prose-headings:font-normal prose-headings:italic prose-headings:text-black prose-h1:font-sans prose-h1:not-italic prose-a:text-black prose-a:decoration-1 prose-a:underline-offset-3 prose-a:hover:decoration-2 prose-blockquote:border-black prose-blockquote:text-black prose-code:font-mono prose-img:border prose-img:border-neutral-400 prose-li:text-black prose-p:text-black prose-strong:text-black prose-pre:rounded-none prose-pre:border prose-pre:border-neutral-400 prose-pre:bg-white prose-pre:font-mono prose-pre:text-black prose-table:font-mono prose-table:text-base md:col-span-4 md:col-start-2">{{ .Content }}</div>
 </article>
 {{ end }}
 {{ end }}

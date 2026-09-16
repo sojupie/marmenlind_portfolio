@@ -169,6 +169,13 @@
     overflow-x: auto;
     white-space: nowrap;
     width: max-content;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .prose table th,
+  .prose table td {
+    font-size: 1rem;
   }
 }
 
