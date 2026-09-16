@@ -122,8 +122,8 @@
 
   .type-mono {
     font-family: var(--font-mono);
-    font-size: var(--type-meta-size);
-    line-height: var(--type-meta-leading);
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   .adwais-embed {
