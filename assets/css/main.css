@@ -29,7 +29,11 @@
   .type-body {
     font-family: var(--font-body);
     font-size: var(--type-body-size);
+    font-kerning: normal;
+    font-synthesis: none;
+    font-variant-ligatures: common-ligatures;
     line-height: var(--type-body-leading);
+    text-rendering: optimizeLegibility;
   }
 
   .prose.type-body {
@@ -67,6 +71,7 @@
   .type-meta {
     font-family: var(--font-body);
     font-size: var(--type-meta-size);
+    font-variant-numeric: oldstyle-nums proportional-nums;
     line-height: var(--type-meta-leading);
   }
 
@@ -130,6 +135,7 @@
 }
 
 @theme {
+  --color-ink: #171513;
   --font-display: "Tiempos Fine", Georgia, serif;
   --font-body: "Tiempos Text", Georgia, serif;
   --font-heading: "Tiempos Headline", Georgia, serif;
