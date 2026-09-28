@@ -3,12 +3,12 @@
 @source "../../layouts";
 @source "../../content";
 
-@font-face { font-family: "Tiempos Fine"; src: url("/assets/fonts/tiempos-subset/TiemposFine-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "Tiempos Headline"; src: url("/assets/fonts/tiempos-subset/TiemposHeadline-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "Tiempos Headline"; src: url("/assets/fonts/tiempos-subset/TiemposHeadline-Italic.woff2") format("woff2"); font-style: italic; font-weight: 400; font-display: swap; }
-@font-face { font-family: "Tiempos Text"; src: url("/assets/fonts/tiempos-subset/TiemposText-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
-@font-face { font-family: "Tiempos Text"; src: url("/assets/fonts/tiempos-subset/TiemposText-Italic.woff2") format("woff2"); font-style: italic; font-weight: 300; font-display: swap; }
-@font-face { font-family: "Tiempos Text"; src: url("/assets/fonts/tiempos-subset/TiemposText-Bold.woff2") format("woff2"); font-weight: 600 700; font-display: swap; }
+@font-face { font-family: "Noto Sans"; src: url("/assets/fonts/noto-sans-subset/NotoSans-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Noto Sans"; src: url("/assets/fonts/noto-sans-subset/NotoSans-Italic.woff2") format("woff2"); font-style: italic; font-weight: 400; font-display: swap; }
+@font-face { font-family: "Noto Sans"; src: url("/assets/fonts/noto-sans-subset/NotoSans-Medium.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+@font-face { font-family: "Noto Sans"; src: url("/assets/fonts/noto-sans-subset/NotoSans-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Noto Sans"; src: url("/assets/fonts/noto-sans-subset/NotoSans-Bold.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Noto Sans Mono"; src: url("/assets/fonts/noto-sans-subset/NotoSansMono-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 
 @layer base {
   :root {
@@ -71,7 +71,7 @@
   .type-meta {
     font-family: var(--font-body);
     font-size: var(--type-meta-size);
-    font-variant-numeric: oldstyle-nums proportional-nums;
+    font-variant-numeric: lining-nums proportional-nums;
     line-height: var(--type-meta-leading);
   }
 
@@ -136,12 +136,12 @@
 
 @theme {
   --color-ink: #171513;
-  --font-display: "Tiempos Fine", Georgia, serif;
-  --font-body: "Tiempos Text", Georgia, serif;
-  --font-heading: "Tiempos Headline", Georgia, serif;
+  --font-display: "Noto Sans", Arial, sans-serif;
+  --font-body: "Noto Sans", Arial, sans-serif;
+  --font-heading: "Noto Sans", Arial, sans-serif;
   --font-sans: var(--font-display);
   --font-serif: var(--font-body);
   --font-deck: var(--font-heading);
-  --font-mono: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono: "Noto Sans Mono", ui-monospace, monospace;
   --background-image-paper: url("/assets/img/paper.webp");
 }
