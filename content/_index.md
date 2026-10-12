@@ -1,17 +1,15 @@
 ---
 title: 'Olle Marmenlind'
-description: 'Computer Engineering undergraduate with experience in backend and data systems, embedded software, and technical product ownership.'
-lead: 'Work as Technical Product Owner at Sevan AB while completing a B.Sc. in Computer Engineering at KTH, will transition into systems and software engineering in 2027.'
+description: 'Final-year KTH Computer Engineering student with experience in embedded and full-stack engineering and technical product ownership.'
+lead: 'Final-year Computer Engineering student at KTH with experience in embedded and full-stack engineering, alongside my role as Technical Product Owner at Sevan AB.'
 ---
 
-A summary of my engineering experience:
-- Built a fullstack web app and data ingestion system for a software-dev consultant company specializing in e-commerce systems with over 35 client storefronts (Motillo).
-- Written C/FreeRTOS embedded firmware as well as a PC data visualization tool for fiber-optic sensing systems/hardware for the global industry leader in FBG's and fiber-optic sensing systems, Proximion (a Hexatronic Group subsidary).
-- Lead internal development of internal tools (sales catalog/pricelist generator, CRM, dashboards) at Sevan.
+My primary interests are backend and systems engineering, particularly runtimes, network infrastructure, and performance. My work spans FreeRTOS firmware, backend data pipelines, and full-stack applications.
 
-Broadly interested in systems engineering and performance oriented engineering:
-- System design
-- Runtimes
-- Platform and network infrastructure
-- Performance-oriented backend development
-- High speed I/O
+At Motillo, I built an e-commerce monitoring and analytics application and reduced representative reporting queries from roughly 330 ms to 20 ms across four million simulated orders. At Proximion, I worked on multithreaded firmware, MCU-to-PC communication, and debugging for fiber-optic sensing systems.
+
+I also built [Token Catalog](/projects/token-catalog/), a Go pipeline and web service that makes Material Design token data available to developers and coding agents through verified, versioned captures.
+
+I am also developing [Linduistics (WIP)](/projects/linduistics/), a lexical analysis platform for comparing pronunciation and word senses across five Germanic languages.
+
+I am available for a software engineering internship or thesis project from early 2027, ahead of graduation in June 2027.

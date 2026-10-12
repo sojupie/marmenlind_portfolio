@@ -4,8 +4,8 @@
   {{ .Content }}
 </div>
 {{ else }}
-<article class="mx-auto grid w-full max-w-6xl px-5 py-12 md:grid-cols-5 md:gap-x-8 md:px-8 md:py-16 lg:pb-28 xl:px-12">
-  <header class="grid border-b border-black pb-12 md:col-span-5 md:grid-cols-5 md:gap-x-8">
+<article class="mx-auto grid w-full grid-cols-1 max-w-6xl px-5 py-12 md:grid-cols-5 md:gap-x-8 md:px-8 md:py-16 lg:pb-28 xl:px-12">
+  <header class="grid grid-cols-1 border-b border-black pb-12 md:col-span-5 md:grid-cols-5 md:gap-x-8">
     <p class="type-meta mb-10 md:col-span-4">{{ with .Date }}{{ .Format "2006-01-02" }}{{ else }}{{ .Params.year }}{{ end }}</p>
     <h1 class="mb-5 font-sans text-4xl font-medium leading-tight tracking-tight md:col-span-4 md:col-start-2 md:text-5xl">{{ .Title }}</h1>
     <p class="type-intro mb-8 md:col-span-4 md:col-start-2">{{ .Description }}</p>

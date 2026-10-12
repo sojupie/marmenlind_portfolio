@@ -15,8 +15,12 @@
         <dd class="col-span-2 m-0">Technical Product Owner / KTH Computer Engineering</dd>
       </div>
       <div class="grid grid-cols-3 gap-4 py-2.5">
+        <dt>Availability</dt>
+        <dd class="col-span-2 m-0">Internship or thesis project from early 2027</dd>
+      </div>
+      <div class="grid grid-cols-3 gap-4 py-2.5">
         <dt>Direction</dt>
-        <dd class="col-span-2 m-0">Systems engineering, backend infrastructure, performance oriented engineering</dd>
+        <dd class="col-span-2 m-0">Backend and systems engineering, performance, infrastructure</dd>
       </div>
     </dl>
   </header>
@@ -108,9 +112,11 @@
           <p class="text-sm italic text-neutral-600">{{ .Params.discipline }}</p>
           {{ if .Params.github_url }}
           <div class="mt-3 flex flex-wrap items-center gap-4">
-            <a class="inline-flex items-center gap-2 rounded-full border border-black px-3 py-1.5 font-mono text-sm no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="{{ .Params.external_url }}" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-lg! leading-none" aria-hidden="true">play_arrow</span><span>View interactive demo</span><span class="sr-only"> (opens in new tab)</span></a>
-            <a class="inline-flex items-center no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="{{ .Params.github_url }}" target="_blank" rel="noopener noreferrer" aria-label="View ADWAIS source on GitHub"><img class="project-github-icon size-12 shrink-0" src="/assets/img/github-invertocat.svg" alt=""/><span class="sr-only">GitHub (opens in new tab)</span></a>
-            <a class="inline-flex items-center no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="https://adwais.marmenlind.com/swagger/index.html" target="_blank" rel="noopener noreferrer" aria-label="View ADWAIS Swagger API documentation"><img class="project-github-icon size-12 shrink-0" src="/assets/img/swagger-api-icon.svg" alt=""/><span class="sr-only">Swagger API documentation (opens in new tab)</span></a>
+            <a class="inline-flex items-center gap-2 rounded-full border border-black px-3 py-1.5 font-mono text-sm no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="{{ .Params.external_url }}" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-lg! leading-none" aria-hidden="true">{{ .Params.external_icon | default "play_arrow" }}</span><span>{{ .Params.external_label | default "View interactive demo" }}</span><span class="sr-only"> (opens in new tab)</span></a>
+            <a class="inline-flex items-center no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="{{ .Params.github_url }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ .Title }} source on GitHub"><img class="project-github-icon size-12 shrink-0" src="/assets/img/github-invertocat.svg" alt=""/><span class="sr-only">GitHub (opens in new tab)</span></a>
+            {{ with .Params.api_url }}
+            <a class="inline-flex items-center no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="{{ . }}" target="_blank" rel="noopener noreferrer" aria-label="View API documentation"><img class="project-github-icon size-12 shrink-0" src="/assets/img/swagger-api-icon.svg" alt=""/><span class="sr-only">Swagger API documentation (opens in new tab)</span></a>
+            {{ end }}
           </div>
           {{ else if in .Params.external_url "github.com" }}
           <a class="mt-3 inline-flex items-center no-underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black" href="{{ .Params.external_url }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ .Title }} on GitHub"><img class="project-github-icon size-12 shrink-0" src="/assets/img/github-invertocat.svg" alt=""/><span class="sr-only">GitHub (opens in new tab)</span></a>
@@ -174,8 +180,8 @@
         <dd class="col-span-2 m-0">Linux, FreeRTOS, RISC-V, Docker, CI/CD, Microservices, Distributed Systems</dd>
       </div>
       <div class="grid grid-cols-3 gap-4 py-2.5">
-        <dt>Backend</dt>
-        <dd class="col-span-2 m-0">PostgreSQL, Elasticsearch, Spring Boot, ASP.NET Core, REST, ETL/data pipelines,
+        <dt>Web &amp; Data</dt>
+        <dd class="col-span-2 m-0">React, HTMX, templ, PostgreSQL, SQLite, Elasticsearch, Spring Boot, ASP.NET Core, REST, ETL/data pipelines,
           background jobs</dd>
       </div>
       <div class="grid grid-cols-3 gap-4 py-2.5">

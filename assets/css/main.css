@@ -36,6 +36,26 @@
     text-rendering: optimizeLegibility;
   }
 
+  /* Grid items must shrink to their tracks rather than their content widths. */
+  .grid > * {
+    min-width: 0;
+  }
+
+  main {
+    overflow-wrap: anywhere;
+  }
+
+  .prose {
+    min-width: 0;
+  }
+
+  /* Preserve code formatting and keep its scrolling inside the article. */
+  .prose pre {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-wrap: normal;
+  }
+
   .prose.type-body {
     line-height: var(--type-body-leading);
   }
