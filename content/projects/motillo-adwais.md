@@ -23,12 +23,6 @@ A multi-organization platform for e-commerce analytics, endpoint monitoring, and
   <iframe src="https://adwais.marmenlind.com" title="ADWAIS live demo" loading="lazy"></iframe>
 </div>
 
-## Engineering work
-
-I built the React/TypeScript interface and ASP.NET Core backend during my KTH industry project at Motillo, with Entra ID authentication and support for legacy Chrome 76 kiosks.
-
-Reporting combines PostgreSQL materialized views for historical rollups with live order data. Benchmarks across four million simulated orders reduced representative query time from roughly 330 ms to 20 ms. Hangfire and Polly buffer asynchronous ingestion around upstream rate limits, while OpenTelemetry provides observability.
-
 ## Architecture
 
 A monorepo managed with pnpm workspaces.
