@@ -13,6 +13,8 @@ github_url: 'https://github.com/sojupie/tokens'
 featured: true
 ---
 
+[Visit Token Catalog ↗](https://tokencatalog.dev)
+
 Token Catalog collects design tokens and makes them easier to browse, compare
 and download. [Material Design 3](https://tokencatalog.dev/md3/) is the first
 supported collection.
