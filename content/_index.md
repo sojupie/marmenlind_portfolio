@@ -10,6 +10,6 @@ At Motillo, I built an e-commerce monitoring and analytics application and reduc
 
 I also built [Token Catalog](/projects/token-catalog/), a Go pipeline and web service that makes Material Design token data available to developers and coding agents through verified, versioned captures.
 
-I am also developing [Linduistics (WIP)](/projects/linduistics/), a lexical analysis platform for comparing pronunciation and word senses across five Germanic languages.
+I am also developing [Linduistics (WIP)](/projects/linduistics/), an application for comparing pronunciation and word meanings across five Germanic languages.
 
 I am available for a software engineering internship or thesis project from early 2027, ahead of graduation in June 2027.
