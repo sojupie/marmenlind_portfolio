@@ -163,5 +163,4 @@
   --font-serif: var(--font-body);
   --font-deck: var(--font-heading);
   --font-mono: "Noto Sans Mono", ui-monospace, monospace;
-  --background-image-paper: url("/assets/img/paper.webp");
 }
