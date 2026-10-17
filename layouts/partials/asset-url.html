@@ -1,0 +1,13 @@
+{{- $url := . -}}
+{{- if strings.HasPrefix $url "/assets/" -}}
+  {{- $parsed := urls.Parse $url -}}
+  {{- with resources.Get (printf "public-assets%s" $parsed.Path) -}}
+    {{- $asset := . | resources.Copy (printf "assets/versioned/%s" (strings.TrimPrefix "/assets/" $parsed.Path)) | fingerprint "sha256" -}}
+    {{- $url = $asset.RelPermalink -}}
+    {{- with $parsed.RawQuery -}}{{- $url = printf "%s?%s" $url . -}}{{- end -}}
+    {{- with $parsed.Fragment -}}{{- $url = printf "%s#%s" $url . -}}{{- end -}}
+  {{- else -}}
+    {{- errorf "Local asset does not exist: %s" $parsed.Path -}}
+  {{- end -}}
+{{- end -}}
+{{- return $url -}}

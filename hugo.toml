@@ -21,3 +21,15 @@ enableRobotsTXT = true
 
 [security]
   allowContent = ['^text/html$', '^text/markdown$']
+
+# Make static files available to Hugo Pipes while preserving their original URLs.
+[module]
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    source = 'static'
+    target = 'static'
+  [[module.mounts]]
+    source = 'static'
+    target = 'assets/public-assets'

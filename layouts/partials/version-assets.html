@@ -1,0 +1,9 @@
+{{- $html := string . -}}
+{{- /* Handles rendered Markdown, raw HTML attributes, and inline CSS URLs. */ -}}
+{{- range findRE `(?:src|href)=["'](/assets/[^"']+)["']|url\(["']?(/assets/[^)"']+)["']?\)` $html -}}
+  {{- $original := . -}}
+  {{- $url := index (findRE `/assets/[^"'\s)<>]+` $original) 0 -}}
+  {{- $versioned := partial "asset-url.html" $url -}}
+  {{- $html = strings.Replace $html $original (strings.Replace $original $url $versioned) -}}
+{{- end -}}
+{{- return ($html | safeHTML) -}}
