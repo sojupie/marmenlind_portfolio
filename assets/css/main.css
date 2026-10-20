@@ -11,7 +11,13 @@
 @font-face { font-family: "Noto Sans Mono"; src: url("/assets/fonts/noto-sans-subset/NotoSansMono-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 
 @layer base {
+  /* Scale all rem-based typography and spacing from the same 16–20px range. */
+  html {
+    font-size: clamp(1rem, calc(0.9375rem + 0.25vw), 1.25rem);
+  }
+
   :root {
+    --type-page-size: 2.4rem;
     --type-body-size: 1rem;
     --type-body-leading: 1.5;
     --type-intro-size: 1.25rem;
@@ -58,6 +64,12 @@
 
   .prose.type-body {
     line-height: var(--type-body-leading);
+  }
+
+  .type-page {
+    font-family: var(--font-heading);
+    font-size: var(--type-page-size);
+    line-height: 1.15;
   }
 
   .type-intro {
