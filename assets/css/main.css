@@ -11,9 +11,9 @@
 @font-face { font-family: "Noto Sans Mono"; src: url("/assets/fonts/noto-sans-subset/NotoSansMono-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
 
 @layer base {
-  /* Scale all rem-based typography and spacing from the same 16–20px range. */
+  /* Scale all rem-based typography and spacing from the same 16–18px range. */
   html {
-    font-size: clamp(1rem, calc(0.9375rem + 0.25vw), 1.25rem);
+    font-size: clamp(1rem, calc(0.9375rem + 0.15625vw), 1.125rem);
   }
 
   :root {
