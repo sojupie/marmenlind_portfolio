@@ -19,13 +19,21 @@ class AssetLinks(HTMLParser):
         self.urls = set()
 
     def handle_starttag(self, tag, attrs):
+        attributes = dict(attrs)
+        if tag == "link" and attributes.get("rel") == "stylesheet":
+            assert attributes.get("media") != "print" and "onload" not in attributes, attributes
         self.urls.update(value for key, value in attrs if key in ("src", "href") and value)
+        for key, value in attrs:
+            if key == "srcset" and value:
+                self.urls.update(item.strip().split()[0] for item in value.split(","))
 
 
 def verify(output):
     versions = {}
     for page in output.rglob("*.html"):
         html = page.read_text()
+        assert "fonts.googleapis.com" not in html and "fonts.gstatic.com" not in html, page
+        assert "font-display:swap" not in html, page
         links = AssetLinks()
         links.feed(html)
         links.urls.update(re.findall(r'url\(["\']?(/assets/[^)"\']+)', html))
