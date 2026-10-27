@@ -132,38 +132,31 @@
   }
 
   .adwais-embed {
-    height: 16rem;
+    --demo-scale: 0.28;
+    height: calc(900px * var(--demo-scale));
     overflow: hidden;
     border: 1px solid #a3a3a3;
+    box-sizing: content-box;
   }
 
   .adwais-embed iframe {
-    width: 357.14%;
+    display: block;
+    width: calc(100% / var(--demo-scale));
     height: 900px;
-    transform: scale(0.28);
+    transform: scale(var(--demo-scale));
     transform-origin: top left;
     border: 0;
   }
 
   @media (min-width: 640px) {
     .adwais-embed {
-      height: 34rem;
-    }
-
-    .adwais-embed iframe {
-      width: 238.1%;
-      transform: scale(0.42);
+      --demo-scale: 0.42;
     }
   }
 
   @media (min-width: 1024px) {
     .adwais-embed {
-      height: 34rem;
-    }
-
-    .adwais-embed iframe {
-      width: 166.67%;
-      transform: scale(0.6);
+      --demo-scale: 0.6;
     }
   }
 
