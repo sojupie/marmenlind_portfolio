@@ -2,8 +2,8 @@
 title: 'Token Catalog'
 slug: 'token-catalog'
 date: 2026-10-11
-description: 'Versioned Material Design token data for custom components and agent-assisted development.'
-summary: 'A Go pipeline and live web service that captures dynamically loaded Material Design tokens, verifies coverage, detects semantic changes, and publishes data for developers and coding agents.'
+description: 'Design token catalog, component playground, and motion tools for developers and coding agents.'
+summary: 'Captures and verifies Material Design 3 tokens, publishes data for developers and coding agents, and supplies component examples and browser tools for measuring UI motion.'
 year: '2026'
 discipline: 'Go / Chromium / SQLite / templ / HTMX'
 external_url: 'https://tokencatalog.dev'
@@ -24,7 +24,7 @@ references and settings are available in readable pages and structured responses
 that can be inspected, crawled and fetched with ordinary HTTP clients. Source
 links connect the data to the original design guidance.
 
-![Token Catalog showing the Material Design 3 component catalog](/assets/img/token-catalog/catalog.png)
+[![Token Catalog landing page with Material Design 3 components and styles](/assets/img/token-catalog/landing-page.png)](https://tokencatalog.dev/md3/)
 
 ## Browse and download
 
@@ -43,6 +43,40 @@ was observed. Incomplete captures remain marked as partial.
 The same data is available through a public JSON API, Markdown responses and
 read-only MCP tools. See [usage](https://github.com/sojupie/tokens/blob/main/docs/usage.md) and
 [API and agent access](https://github.com/sojupie/tokens/blob/main/docs/reference/agents.md).
+
+## Component playground
+
+Component pages include interactive examples and comparisons of supported
+variants, sizes and states. The examples use CSS bindings generated from the
+captured tokens, with authored HTML, layout and browser behavior where tokens
+do not describe implementation. Theme and contrast controls apply to both the
+site and its examples.
+
+The gallery and playground use the same Forge assets. Specimen markup,
+component styling and browser behavior have separate source files; see the
+[component authoring map](https://github.com/sojupie/tokens/blob/main/docs/architecture.md#component-authoring) to follow a
+component from its example to its token bindings. These components ship with the site and are shared with the motion tools through
+the Forge package in this repository. There is no standalone package release.
+
+## Motion tools
+
+The [tools page](https://tokencatalog.dev/md3/tools) includes two browser apps:
+
+- [Material Motion Lab](https://tokencatalog.dev/tools/motion/) measures UI
+  movement in recordings. Track an object or edge, compare two videos, or compare
+  measurements with Material Design 3 motion curves. A bundled example lets you
+  explore an analysis before importing a video.
+- [Carousel playground](https://tokencatalog.dev/tools/motion-lab/) helps
+  investigate uneven carousel motion after dragging on iOS. Try different
+  implementations on your device and record how they settle.
+
+Material Motion Lab processes videos on your device and saves projects in your
+browser. Download a `.motion` project file to keep a portable copy, including its
+videos and measurements. Videos and projects are not uploaded to the server.
+
+The tools share the catalog's navigation, themes and Forge components. Their
+source lives in [Material Motion Lab](https://github.com/sojupie/material-motion-lab)
+and [Carousel playground](https://github.com/sojupie/carousel-motion-lab).
 
 ## Use with your agent
 
@@ -110,16 +144,22 @@ missing even though the discovery and access checks for the public service pass.
 
 ## Repository components
 
-The website, data pipeline and agent integrations share one Go application.
+The project has three parts in one repository. They share the existing CLI,
+Go module, and deployment.
 
 | Part | What it does | Source |
 | --- | --- | --- |
-| Catalog website | Renders token tables, filters, reference chains, downloads and change history with templ and HTMX | [`internal/web/`](https://github.com/sojupie/tokens/tree/main/internal/web/) |
-| Material Design 3 capture | Opens Google's source pages with Chromium and saves token payloads, source URLs and coverage results | [`internal/crawl/`](https://github.com/sojupie/tokens/tree/main/internal/crawl/) |
-| Snapshots and publication | Verifies captured files, compares token values and builds the SQLite index and JSON exports | [`internal/tokensnapshot/`](https://github.com/sojupie/tokens/tree/main/internal/tokensnapshot/), [`internal/publish/`](https://github.com/sojupie/tokens/tree/main/internal/publish/) |
-| Agent access | Serves Markdown, JSON, OpenAPI, discovery metadata and read-only MCP tools; provides an installable skill | [`internal/web/`](https://github.com/sojupie/tokens/tree/main/internal/web/), [`skills/token-catalog/`](https://github.com/sojupie/tokens/tree/main/skills/token-catalog/) |
-| Update and deployment tools | Runs scheduled captures, reviews changes, activates publications and sends notifications | [`internal/update/`](https://github.com/sojupie/tokens/tree/main/internal/update/), [`deploy/`](https://github.com/sojupie/tokens/tree/main/deploy/), [GitHub workflows](https://github.com/sojupie/tokens/tree/main/.github/workflows/) |
-| Usage reporting | Retains hourly request totals and produces weekly email reports and the README chart | [`internal/usage/`](https://github.com/sojupie/tokens/tree/main/internal/usage/) |
+| Source | Captures upstream data, verifies snapshots, compares changes, builds publications, and exports DTCG | [`source/`](https://github.com/sojupie/tokens/tree/main/source/) |
+| Catalog | Serves token tables, filters, downloads, history, API and agent interfaces, and usage reports | [`catalog/`](https://github.com/sojupie/tokens/tree/main/catalog/) |
+| Forge | Generates CSS and component state bindings, implements browser behavior, and checks the rendered result | [`forge/`](https://github.com/sojupie/tokens/tree/main/forge/) |
+
+[`skills/`](https://github.com/sojupie/tokens/tree/main/skills/) contains the installable agent skill and the reference used
+by the hosted guide. [`cmd/tokens/`](https://github.com/sojupie/tokens/tree/main/cmd/tokens/) provides the shared CLI.
+Deployment configuration remains in [`deploy/`](https://github.com/sojupie/tokens/tree/main/deploy/).
+
+Forge generates the catalog theme and shared components, including buttons,
+cards, chips, fields, menus, and dialogs. See [generated components](https://github.com/sojupie/tokens/blob/main/docs/reference/components.md)
+and [buttons](https://github.com/sojupie/tokens/blob/main/docs/reference/buttons.md) for supported variants, states, and checks.
 
 ## Material Design 3 data pipeline
 
@@ -202,10 +242,20 @@ be assessed against the pages captured in each run.
 
 ## License and attribution
 
-Project code and original documentation are licensed under [MIT](https://github.com/sojupie/tokens/blob/main/LICENSE).
+Token Catalog engine code and original documentation are licensed under the
+[Business Source License 1.1 (BSL 1.1)](https://github.com/sojupie/tokens/blob/main/LICENSE), which converts to the
+[Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) three years
+after the publication date of each version or commit.
+
+Under the Additional Use Grant, Token Catalog is free to use for all individual
+developers, AI agents, non-commercial entities, and any deployment serving
+publicly available, openly licensed design tokens. Production use and self-hosting
+by any entity to serve, browse, or manage proprietary, internal, or non-open
+corporate design systems is strictly prohibited without a separate commercial agreement.
+
 Material Design 3 data comes from Google and retains its upstream terms.
 Bundled fonts, icons and dependencies retain their own licenses.
 
 Token Catalog is an independent project. See [third-party notices](https://github.com/sojupie/tokens/blob/main/THIRD_PARTY_NOTICES.md)
 and [licensing and source attribution](https://github.com/sojupie/tokens/blob/main/docs/licensing.md) for the distinction
-between the software and the data it publishes.
+between the software engine and the token data it publishes.
