@@ -1,14 +1,14 @@
-{{- $source := resources.Get "images/indalsalven.jpg" -}}
+{{- $source := resources.Get "images/marmen-landing.jpg" -}}
 {{- $variants := slice -}}
 {{- $srcset := slice -}}
-{{- range slice 640 1280 1920 -}}
-  {{- $height := div (mul . 3) 8 -}}
-  {{- $path := printf "img/indalsalven-%d.webp" . -}}
-  {{- $image := $source.Fill (printf "%dx%d webp q78 Center" . $height) | resources.Copy (printf "assets/%s" $path) -}}
+{{- range slice 640 860 -}}
+  {{- $height := div . 2 -}}
+  {{- $path := printf "img/marmen-landing-%d.webp" . -}}
+  {{- $image := $source.Fill (printf "%dx%d webp q82 Center" . $height) | resources.Copy (printf "assets/%s" $path) -}}
   {{- /* Publish stable and hashed URLs, as with the site's other local assets. */ -}}
   {{- $stable := $image.RelPermalink -}}
   {{- $versioned := $image | resources.Copy (printf "assets/versioned/%s" $path) | fingerprint "sha256" -}}
   {{- $variants = $variants | append $versioned.RelPermalink -}}
   {{- $srcset = $srcset | append (printf "%s %dw" $versioned.RelPermalink .) -}}
 {{- end -}}
-<img class="mb-10 block w-full rounded-xl md:col-span-5" src="{{ index $variants 1 }}" srcset="{{ delimit $srcset ", " | safeHTMLAttr }}" sizes="(min-width: 80rem) 66rem, (min-width: 48rem) calc(100vw - 4rem), calc(100vw - 2.5rem)" width="1920" height="720" alt="Indalsälven winding through autumn forest" loading="eager" fetchpriority="high">
+<img class="mb-4 block w-full rounded-[3rem] md:col-span-5" src="{{ index $variants 1 }}" srcset="{{ delimit $srcset ", " | safeHTMLAttr }}" sizes="(min-width: 80rem) 66rem, (min-width: 48rem) calc(100vw - 4rem), calc(100vw - 2.5rem)" width="860" height="430" alt="Historic photograph of people beside a passenger boat at a landing on Lake Marmen" loading="eager" fetchpriority="high">

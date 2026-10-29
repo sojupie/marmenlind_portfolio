@@ -10,6 +10,8 @@
 @font-face { font-family: "Noto Sans"; src: url("/assets/fonts/noto-sans-subset/NotoSans-Bold.woff2") format("woff2"); font-weight: 700; font-display: block; }
 @font-face { font-family: "Noto Sans Mono"; src: url("/assets/fonts/noto-sans-subset/NotoSansMono-Regular.woff2") format("woff2"); font-weight: 400; font-display: block; }
 
+@font-face { font-family: "Tiempos Headline"; src: url("/assets/fonts/tiempos-subset/TiemposHeadline-Regular.woff2") format("woff2"); font-weight: 400; font-display: block; }
+
 @font-face { font-family: "Material Symbols Outlined"; src: url("/assets/fonts/material-symbols/material-symbols-outlined.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
 
 .material-symbols-outlined {
@@ -52,6 +54,13 @@
     --type-section-leading: 1.25;
     --type-meta-size: 0.875rem;
     --type-meta-leading: 1.35;
+  }
+
+  .personal-name,
+  .type-page.personal-name {
+    font-family: "Tiempos Headline", Georgia, serif;
+    font-weight: 400;
+    letter-spacing: normal;
   }
 
   .type-body {
