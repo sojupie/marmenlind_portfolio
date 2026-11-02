@@ -4,12 +4,20 @@ description: 'Final-year KTH Computer Engineering student with experience in emb
 lead: 'Final-year Computer Engineering student at KTH with experience in embedded and full-stack engineering, alongside my role as Technical Product Owner at Sevan AB.'
 ---
 
-My primary interests are backend and systems engineering, particularly runtimes, network infrastructure, and performance. My work spans FreeRTOS firmware, backend data pipelines, and full-stack applications.
+A summary of my engineering experience:
 
-At Motillo, I built an e-commerce monitoring and analytics application and reduced representative reporting queries from roughly 330 ms to 20 ms across four million simulated orders. At Proximion, I worked on multithreaded firmware, MCU-to-PC communication, and debugging for fiber-optic sensing systems.
+- Built a full-stack e-commerce monitoring and analytics platform for Motillo, a software consultancy specializing in e-commerce systems with over 35 client storefronts.
+- Wrote C/FreeRTOS embedded firmware and a PC data visualization tool for fiber-optic sensing systems and hardware at Proximion, the global industry leader in FBGs and fiber-optic sensing systems and a Hexatronic Group subsidiary.
+- Lead development of internal tools (sales catalog/pricelist generator, CRM, dashboards) at Sevan. Currently implementing a token-based design system.
 
-I also built [Token Catalog](/projects/token-catalog/), a Go pipeline and web service that makes Material Design token data available to developers and coding agents through verified, versioned captures.
+Projects I’ve made:
 
-I am also developing [Linduistics (WIP)](/projects/linduistics/), an application for comparing pronunciation and word meanings across five Germanic languages.
+- I built [Token Catalog](/projects/token-catalog/), a Go crawling pipeline (“Source”), component compiler (“Forge”), and web service that makes Material Design token data available to developers and coding agents through verified, versioned captures. The catalog’s own styling is based on the actual upstream tokens, compiled by Forge.
+- I am also developing [Linduistics (WIP)](/projects/linduistics/), an application for comparing pronunciation and word meanings across five Germanic languages.
 
-I am available for a software engineering internship or thesis project from early 2027, ahead of graduation in June 2027.
+Broadly interested in systems engineering and performance-oriented engineering:
+
+1. System design
+2. Platform and network infrastructure
+3. Performance-oriented backend development
+4. High-speed I/O
