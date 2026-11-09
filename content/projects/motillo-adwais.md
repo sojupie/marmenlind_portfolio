@@ -7,6 +7,7 @@ summary: 'Multi-organization monitoring and analytics platform combining asynchr
 year: 'March–June 2026'
 discipline: 'C# / ASP.NET Core / PostgreSQL / TypeScript / React'
 external_url: 'https://adwais.marmenlind.com'
+embed_title: 'ADWAIS live demo'
 github_url: 'https://github.com/sojupie/ADWAIS'
 api_url: 'https://adwais.marmenlind.com/swagger/index.html'
 featured: true
@@ -19,7 +20,7 @@ A multi-organization platform for e-commerce analytics, endpoint monitoring, and
 
 [Live interactive demo](https://adwais.marmenlind.com)
 
-<div class="adwais-embed my-6" aria-label="ADWAIS live demo">
+<div class="project-embed my-6" aria-label="ADWAIS live demo">
   <iframe src="https://adwais.marmenlind.com" title="ADWAIS live demo" loading="lazy"></iframe>
 </div>
 

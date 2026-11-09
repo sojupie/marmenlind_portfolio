@@ -140,7 +140,7 @@
     line-height: var(--type-code-leading);
   }
 
-  .adwais-embed {
+  .project-embed {
     --demo-scale: 0.28;
     height: calc(900px * var(--demo-scale));
     overflow: hidden;
@@ -148,7 +148,7 @@
     box-sizing: content-box;
   }
 
-  .adwais-embed iframe {
+  .project-embed iframe {
     display: block;
     width: calc(100% / var(--demo-scale));
     height: 900px;
@@ -158,13 +158,13 @@
   }
 
   @media (min-width: 640px) {
-    .adwais-embed {
+    .project-embed {
       --demo-scale: 0.42;
     }
   }
 
   @media (min-width: 1024px) {
-    .adwais-embed {
+    .project-embed {
       --demo-scale: 0.6;
     }
   }

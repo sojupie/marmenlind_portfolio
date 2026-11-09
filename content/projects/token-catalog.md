@@ -7,6 +7,7 @@ summary: 'Captures and verifies Material Design 3 tokens, publishes data for dev
 year: '2026'
 discipline: 'Go / Chromium / SQLite / templ / HTMX'
 external_url: 'https://tokencatalog.dev'
+embed_title: 'Token Catalog live preview'
 external_label: 'Visit Token Catalog'
 external_icon: 'open_in_new'
 github_url: 'https://github.com/sojupie/tokens'
@@ -24,7 +25,9 @@ references and settings are available in readable pages and structured responses
 that can be inspected, crawled and fetched with ordinary HTTP clients. Source
 links connect the data to the original design guidance.
 
-[![Token Catalog landing page with Material Design 3 components and styles](/assets/img/token-catalog/landing-page.png)](https://tokencatalog.dev/md3/)
+<div class="project-embed my-6" aria-label="Token Catalog live preview">
+  <iframe src="https://tokencatalog.dev" title="Token Catalog live preview" loading="lazy"></iframe>
+</div>
 
 ## Browse and download
 
